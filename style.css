@@ -334,3 +334,53 @@ form button:hover {
   margin: 0 20px 20px;
   color: #555;
 }
+
+
+
+
+
+
+
+
+
+/* Markets Section */
+.markets-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.markets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.market-card {
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.market-card:hover {
+  transform: translateY(-5px);
+}
+
+.market-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.market-card h3 {
+  font-size: 1.25rem;
+  margin: 20px;
+  color: #222;
+}
+
+.market-card p {
+  margin: 0 20px 20px;
+  color: #555;
+}
+
