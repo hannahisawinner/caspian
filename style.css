@@ -436,10 +436,16 @@ body.menu-open .hamburger {
   padding: 0 20px;
 }
 
+/* Layout: Hero and Grid Wrapper */
+.projects-content {
+  display: flex;
+  flex-direction: column-reverse; /* Stack with hero below on small screens */
+  gap: 60px;
+}
+
 /* Hero Section */
 .projects-hero {
-  text-align: center;
-  margin-bottom: 60px;
+  text-align: left;
 }
 
 .projects-hero h1 {
@@ -451,8 +457,7 @@ body.menu-open .hamburger {
 .projects-hero p {
   font-size: 1.1rem;
   color: #666;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 500px;
 }
 
 /* Projects Grid */
@@ -499,7 +504,23 @@ body.menu-open .hamburger {
   line-height: 1.5;
 }
 
+/* Responsive layout change for larger screens */
+@media (min-width: 992px) {
+  .projects-content {
+    flex-direction: row; /* Hero on left, grid on right */
+    align-items: flex-start;
+  }
 
+  .projects-hero {
+    flex: 1;
+    position: sticky;
+    top: 80px;
+  }
+
+  .projects-grid {
+    flex: 2;
+  }
+}
 
 
 
