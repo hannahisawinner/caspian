@@ -48,6 +48,11 @@ body {
   z-index: 1100;
 }
 
+/* Hide hamburger when overlay is active */
+body.menu-open .hamburger {
+  display: none;
+}
+
 /* Overlay styles */
 .overlay {
   position: fixed;
@@ -55,48 +60,46 @@ body {
   right: -100%;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.3); /* light, transparent overlay */
-  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.6); /* light, transparent overlay */
+  backdrop-filter: blur(2px);
   transition: right 0.3s ease-in-out; 
   z-index: 1000;
 }
 
 .overlay.active {
-  right: 0; /* Slide in from the left */
+  right: 0; /* Slide in from the right */
 }
 
 /* Overlay panel */
 .overlay-content {
   position: absolute;
   top: 0;
-  right: 0;
-  width: 80%;
-  max-width: 300px;
+  left: 0;
+  width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
   padding: 60px 20px;
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-/* Close button */
+/* Close button X */
 .close-btn {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 30px;
   font-size: 2rem;
   cursor: pointer;
   color: #333;
+  z-index: 1101;
 }
 
 /* Overlay nav links */
 .overlay-content ul {
   list-style: none;
-  margin-top: 100px;
+  margin: 0;
   padding: 0;
-  width: 100%;
   text-align: center;
 }
 
