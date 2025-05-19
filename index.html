@@ -34,6 +34,36 @@
     </div>
   </div>
 
+
+   <!-- Image Carousel Section -->
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-slide active">
+        <img src="https://source.unsplash.com/800x500/?interior,house,1" alt="Interior 1">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://source.unsplash.com/800x500/?interior,house,2" alt="Interior 2">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://source.unsplash.com/800x500/?interior,house,3" alt="Interior 3">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://source.unsplash.com/800x500/?interior,house,4" alt="Interior 4">
+      </div>
+
+      <button class="carousel-nav prev">&#10094;</button>
+      <button class="carousel-nav next">&#10095;</button>
+
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
+
+  
   <!-- Page Content -->
   <header class="hero">
     <h1>Welcome to Caspian Capital</h1>
@@ -64,5 +94,56 @@
     }
   </script>
 
+  <!-- Top Carousel Functionality -->
+  <script>
+    const slides = document.querySelectorAll(".carousel-slide");
+    const dots = document.querySelectorAll(".dot");
+    const prev = document.querySelector(".carousel-nav.prev");
+    const next = document.querySelector(".carousel-nav.next");
+
+    let current = 0;
+    let interval = setInterval(nextSlide, 5000); // 5 seconds
+
+    function updateCarousel(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+        dots[i].classList.toggle("active", i === index);
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      updateCarousel(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      updateCarousel(current);
+    }
+
+    next.addEventListener("click", () => {
+      nextSlide();
+      resetInterval();
+    });
+
+    prev.addEventListener("click", () => {
+      prevSlide();
+      resetInterval();
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        current = i;
+        updateCarousel(current);
+        resetInterval();
+      });
+    });
+
+    function resetInterval() {
+      clearInterval(interval);
+      interval = setInterval(nextSlide, 5000);
+    }
+  </script>
+  
 </body>
 </html>
