@@ -8,46 +8,50 @@
 </head>
   
 <body>
+
+  <!-- Desktop Nav -->
   <nav class="navbar">
     <div class="logo">Caspian Capital</div>
     <ul class="nav-links desktop-menu">
-      <li><a href="#">Markets</a></li>
-      <li><a href="#">Recent Projects</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Invest</a></li>
+      <li><a href="/markets/">Markets</a></li>
+      <li><a href="/projects/">Recent Projects</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/invest/" target="_blank" rel="noopener noreferrer">Invest</a></li>
     </ul>
     <div class="hamburger" onclick="openMenu()">☰</div>
   </nav>
 
+  <!-- Overlay Menu -->
   <div id="overlayMenu" class="overlay">
     <div class="overlay-content">
       <span class="close-btn" onclick="closeMenu()">✕</span>
       <ul>
-        <li><a href="#">Markets</a></li>
-        <li><a href="#">Recent Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Invest</a></li>
+        <li><a href="/markets/">Markets</a></li>
+        <li><a href="/projects/">Recent Projects</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/invest/" target="_blank" rel="noopener noreferrer">Invest</a></li>
       </ul>
     </div>
   </div>
 
+  <!-- Page Content -->
   <header class="hero">
     <h1>Welcome to Caspian Capital</h1>
     <p>Building the future of real estate development.</p>
-    
 <!--     <button class="cta-button" disabled title="Coming in Version 2!">Sign In</button> -->
-    
   </header>
 
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Caspian Capital. All rights reserved.</p>
     <div class="social-links">
-      <a href="contact.html" target="_blank" rel="noopener noreferrer">Contact Us</a>
+      <a href="/contact/" target="_blank" rel="noopener noreferrer">Contact Us</a>
  | 
-      <a href="#">Investment Opportunities</a>
+      <a href="/invest/" target="_blank" rel="noopener noreferrer">Investment Opportunities</a>
     </div>
   </footer>
 
+  <!-- Open/Close Overlay Menu -->
   <script>
     function openMenu() {
       document.getElementById("overlayMenu").classList.add("active");
