@@ -445,7 +445,11 @@ body.menu-open .hamburger {
 
 /* Hero Section */
 .projects-hero {
-  text-align: left;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-hero h1 {
@@ -513,8 +517,8 @@ body.menu-open .hamburger {
 
   .projects-hero {
     flex: 1;
-    position: sticky;
-    top: 80px;
+    text-align: center;
+    align-items: center;
   }
 
   .projects-grid {
