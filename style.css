@@ -599,14 +599,14 @@ body.menu-open .hamburger {
   display: block;
 }
 
-.market-card h2 {
+.market-section .market-card h2 {
   font-size: 1.25rem;
   margin: 0px;
   padding: 4px 0;
   color: #222;
 }
 
-.market-card p {
+market-section .market-card p {
   margin: 0px;
   padding: 4px 0;
   color: #333;
