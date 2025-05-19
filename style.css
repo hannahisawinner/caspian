@@ -35,7 +35,7 @@ body {
 .hamburger {
   font-size: 2rem;
   cursor: pointer;
-  display: block;
+  display: none;
   position: absolute;
   top: 20px;
   right: 40px;
@@ -108,11 +108,25 @@ body.menu-open .hamburger {
   z-index: 1101;
 }
 
-/* Hide all nav links in main navbar */
+/* Show nav links on large screens */
 .nav-links,
 .desktop-menu {
-  display: none !important;
+  display: flex !important;
+  gap: 20px;
+  align-items: center;
 }
+
+@media (max-width: 1000px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links,
+  .desktop-menu {
+    display: none !important;
+  }
+}
+
 
 /* Hero section */
 .hero {
