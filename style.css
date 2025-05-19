@@ -84,17 +84,6 @@ body.menu-open .hamburger {
   justify-content: center;
 }
 
-/* Close button X */
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #333;
-  z-index: 1101;
-}
-
 /* Overlay nav links */
 .overlay-content ul {
   list-style: none;
@@ -112,6 +101,23 @@ body.menu-open .hamburger {
   font-size: 1.5rem;
   color: #222;
   font-weight: 600;
+}
+
+/* Close button X */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  z-index: 1101;
+}
+
+/* Hide all nav links in main navbar */
+.nav-links,
+.desktop-menu {
+  display: none !important;
 }
 
 /* Hero section */
