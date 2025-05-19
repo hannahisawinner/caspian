@@ -294,7 +294,7 @@ body.menu-open .hamburger {
   background-color: #ccc;
   border: none;
   border-radius: 5px;
-  cursor: not-allowed;
+  cursor: pointer;
   color: #888;
 }
 
