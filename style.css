@@ -291,12 +291,21 @@ body.menu-open .hamburger {
 .cta-button {
   padding: 12px 24px;
   font-size: 1rem;
-  background-color: #ccc;
+  background-color: #001f3f; /* Navy Blue */
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: #888;
+  text-decoration: none; /* Removes underline */
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.cta-button:hover {
+  background-color: #003366; /* Slightly lighter navy */
+  transform: scale(1.05);
+}
+
 
 
 
