@@ -603,13 +603,13 @@ body.menu-open .hamburger {
   font-size: 1.25rem;
   margin: 0px;
   padding: 4px 0;
-  color: #222;
+  color: #999;
 }
 
 market-section .market-card p {
   margin: 0px;
   padding: 4px 0;
-  color: #333;
+  color: #777;
 }
 
 
