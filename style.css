@@ -265,3 +265,26 @@ form button:hover {
 }
 
 
+
+
+
+
+
+/* About Section */
+.about-content {
+  background-color: #fdfdfd;
+  padding: 40px 20px;
+}
+
+.about-content h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #222;
+}
+
+.about-content p {
+  margin-bottom: 30px;
+  color: #444;
+}
+
+
