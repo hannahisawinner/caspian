@@ -80,21 +80,25 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Welker Properties. All rights reserved.</p>
+    <p>&copy; 2025 Caspian Capital. All rights reserved.</p>
+    <div class="social-links">
+      <a href="contact.html" target="_blank" rel="noopener noreferrer">Contact Us</a> | 
+      <a href="invest.html" target="_blank" rel="noopener noreferrer">Investment Opportunities</a>
     </div>
   </footer>
 
+  <!-- Overlay Menu Scripts -->
   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const overlay = document.querySelector('.overlay');
-    const closeBtn = document.querySelector('.close-btn');
+    function openMenu() {
+      document.getElementById("overlayMenu").classList.add("active");
+      document.body.classList.add("menu-open");
+    }
 
-    hamburger.addEventListener('click', () => {
-      document.body.classList.add('menu-open');
-      overlay.classList.add('active');
-    });
+    function closeMenu() {
+      document.getElementById("overlayMenu").classList.remove("active");
+      document.body.classList.remove("menu-open");
+    }
+  </script>
 
-    closeBtn.addEventListener('click', () => {
-      document.body.classList.remove
