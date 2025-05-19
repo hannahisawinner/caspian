@@ -632,10 +632,27 @@ market-section .market-card .market-overlay p {
   color: #444;
 }
 
-.about-hero .container {
-  text-align: left;
-  background: rgba(0, 0, 0, 0.4); /* Adjust opacity for darkness */
+.about-hero {
+  position: relative;
+  color: white;
+  padding: 100px 20px;
+  overflow: hidden;
 }
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay across entire section */
+  z-index: 0;
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 1; /* Ensure text appears above overlay */
+  text-align: left;
+}
+
 
 
 
