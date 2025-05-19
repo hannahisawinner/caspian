@@ -288,3 +288,49 @@ form button:hover {
 }
 
 
+
+
+
+
+
+
+/* Projects Section */
+.projects-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  margin: 20px;
+  color: #222;
+}
+
+.project-card p {
+  margin: 0 20px 20px;
+  color: #555;
+}
