@@ -473,27 +473,42 @@ body.menu-open .hamburger {
 
 
 /* Markets Section */
-.markets-section {
-  background-color: #fff;
-  padding: 60px 0;
+.market-section {
+  display: grid;
+  grid-template-columns: 1fr; /* default: 1 column */
+  gap: 20px;
+  padding: 40px 20px;
 }
 
-.markets-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+@media screen and (min-width: 768px) {
+  .market-section {
+    grid-template-columns: 1fr 1fr; /* 2 columns on wider screens */
+  }
 }
 
 .market-card {
-  background-color: #fdfdfd;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* make them taller so the image is visible */
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
 .market-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.02);
+}
+
+.market-overlay {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  color: white;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .market-card img {
