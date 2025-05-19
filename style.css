@@ -580,7 +580,18 @@ body.menu-open .hamburger {
   transform: scale(1.02);
 }
 
-
+.market-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  background: transparent; /* remove gradient */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* optional for better readability */
+}
 
 .market-card img {
   width: 100%;
@@ -595,7 +606,7 @@ body.menu-open .hamburger {
   color: #999;
 }
 
-market-section .market-card p {
+market-section .market-card .market-overlay p {
   margin: 0px;
   padding: 4px 0;
   color: #777;
