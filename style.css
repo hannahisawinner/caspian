@@ -589,7 +589,7 @@ body.menu-open .hamburger {
   justify-content: center;
   color: white;
   padding: 20px;
-  background: transparent; /* remove gradient */
+  background: rgba(0, 0, 0, 0.4); /* adjust opacity as needed */
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* optional for better readability */
 }
 
@@ -600,7 +600,7 @@ body.menu-open .hamburger {
 }
 
 .market-section .market-card .market-overlay h2 {
-  font-size: 1.25rem;
+  font-size: 2rem;
   margin: 0px;
   padding: 4px 0;
 }
