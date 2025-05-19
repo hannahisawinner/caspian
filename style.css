@@ -17,6 +17,7 @@ body {
 
 /* Navigation bar */
 .navbar {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,20 +31,84 @@ body {
   font-weight: bold;
 }
 
-.nav-links {
-  list-style: none;
+/* Hide all nav-links */
+.nav-links,
+.desktop-menu {
+  display: none !important;
+}
+
+/* Hamburger menu always visible */
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  z-index: 1100;
+}
+
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent */
+  backdrop-filter: blur(4px);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.overlay.active {
+  right: 0;
+}
+
+/* Overlay panel */
+.overlay-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 60px 20px;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.nav-links li a {
-  text-decoration: none;
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
   color: #333;
-  font-weight: 500;
 }
 
-.nav-links li a:hover {
-  color: #007BFF;
+/* Overlay nav links */
+.overlay-content ul {
+  list-style: none;
+  margin-top: 100px;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay-content ul li {
+  margin: 20px 0;
+}
+
+.overlay-content ul li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #222;
+  font-weight: 600;
 }
 
 /* Hero section */
@@ -92,13 +157,8 @@ body {
   color: #007BFF;
 }
 
-/* Responsive design */
+/* Responsive design tweaks */
 @media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -108,10 +168,7 @@ body {
   }
 }
 
-
-
-
-
+/* Form page */
 .form-container {
   max-width: 600px;
   margin: 80px auto;
@@ -156,77 +213,4 @@ form button {
 
 form button:hover {
   background-color: #0056b3;
-}
-
-
-/* Hamburger button */
-.hamburger {
-  font-size: 2rem;
-  cursor: pointer;
-  display: none;
-}
-
-/* Overlay styles */
-.overlay {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent */
-  backdrop-filter: blur(3px);
-  transition: right 0.3s ease-in-out;
-  z-index: 1000;
-}
-
-.overlay.active {
-  right: 0;
-}
-
-.overlay-content {
-  position: relative;
-  height: 100%;
-  padding-top: 40px;
-  background-color: rgba(255, 255, 255, 0.95);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.overlay-content ul {
-  list-style: none;
-  margin-top: 100px;
-  padding: 0;
-  text-align: center;
-}
-
-.overlay-content ul li {
-  margin: 20px 0;
-}
-
-.overlay-content ul li a {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-}
-
-/* Close button */
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #333;
-}
-
-/* Always hide desktop nav */
-.desktop-menu {
-  display: none;
-}
-
-/* Always show hamburger */
-.hamburger {
-  display: block;
 }
