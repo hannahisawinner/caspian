@@ -3,32 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects | Welker Properties</title>
+  <title>Markets | Caspian Capital</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
+  
 <body>
 
-  <!-- Navbar -->
+  <!-- Desktop Navbar -->
   <nav class="navbar">
     <a href="index.html" class="logo">Caspian Capital</a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/projects/">Projects</a></li>
-      <li><a href="/contact/">Contact</a></li>
+    <ul class="nav-links desktop-menu">
+      <li><a href="projects.html">Recent Projects</a></li>
+      <li><a href="markets.html" class="active">Markets</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="invest.html" target="_blank" rel="noopener noreferrer">Invest</a></li>
     </ul>
-    <button class="hamburger">&#9776;</button>
+    <div class="hamburger" onclick="openMenu()">☰</div>
   </nav>
 
-  <!-- Mobile Overlay -->
-  <div class="overlay">
-    <span class="close-btn">&times;</span>
+  <!-- Overlay Menu -->
+  <div id="overlayMenu" class="overlay">
     <div class="overlay-content">
+      <span class="close-btn" onclick="closeMenu()">✕</span>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/projects/">Projects</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="projects.html">Recent Projects</a></li>
+        <li><a href="markets.html" class="active">Markets</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="invest.html" target="_blank" rel="noopener noreferrer">Invest</a></li>
       </ul>
     </div>
   </div>
