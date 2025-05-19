@@ -31,12 +31,6 @@ body {
   font-weight: bold;
 }
 
-/* Hide all nav-links */
-.nav-links,
-.desktop-menu {
-  display: none !important;
-}
-
 /* Hamburger menu always visible */
 .hamburger {
   font-size: 2rem;
@@ -67,7 +61,7 @@ body.menu-open .hamburger {
 }
 
 .overlay.active {
-  right: 0; /* Slide in from the right */
+  left: 0; /* Slide in from the left */
 }
 
 /* Overlay panel */
