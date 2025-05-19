@@ -16,6 +16,12 @@ body {
   padding-top: 100px; /* Adjust based on navbar height */
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /* NAVBAR STYLES */
 .navbar {
   position: fixed; /* Fixes the navbar to the top */
