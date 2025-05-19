@@ -194,7 +194,7 @@ body.menu-open .hamburger {
 
 
 
-/* Section Link Panels */
+/* Markets and Recent Projects Section Link Panels */
 .section-links {
   display: flex;
   flex-wrap: wrap;
@@ -289,6 +289,15 @@ body.menu-open .hamburger {
     font-size: 1rem;
   }
 }
+
+
+
+
+
+
+
+
+
 
 /* Form page */
 .form-container {
@@ -598,16 +607,30 @@ form button:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: rgba(0,0,0,0.4);
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 8px 12px;
   cursor: pointer;
   z-index: 2;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.2s ease, background 0.2s ease;
+  border-radius: 50%;
 }
+
+@media (max-width: 768px) {
+  .carousel-nav {
+    font-size: 1.5rem;
+    padding: 6px 10px;
+  }
+}
+
+.carousel-nav:hover {
+  transform: translateY(-50%) scale(1.1);
+  background: rgba(0, 0, 0, 0.6);
+}
+
 
 .carousel-container:hover .carousel-nav {
   opacity: 1;
