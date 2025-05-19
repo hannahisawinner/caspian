@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Welker Properties</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="/" class="logo">Welker Properties</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <button class="hamburger">&#9776;</button>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="overlay">
+    <span class="close-btn">&times;</span>
+    <div class="overlay-content">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>About Welker Properties</h1>
+      <p>Your trusted real estate partner in Arizona. We're committed to helping you find the perfect property for your needs.</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-content">
+    <div class="container">
+      <h2>Who We Are</h2>
+      <p>Welker Properties is a boutique real estate firm specializing in luxury homes and investment properties throughout Arizona. With decades of combined experience, our team brings deep market knowledge and a personalized approach to each client interaction.</p>
+      
+      <h2>Our Mission</h2>
+      <p>To provide exceptional service and real estate expertise that help our clients make confident, informed decisions — whether buying, selling, or investing.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Welker Properties. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const overlay = document.querySelector('.overlay');
+    const closeBtn = document.querySelector('.close-btn');
+
+    hamburger.addEventListener('click', () => {
+      document.body.classList.add('menu-open');
+      overlay.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      document.body.classList.remove('menu-open');
+      overlay.classList.remove('active');
+    });
+  </script>
+
+</body>
+</html>
