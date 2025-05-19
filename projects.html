@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Welker Properties</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="/" class="logo">Welker Properties</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <button class="hamburger">&#9776;</button>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="overlay">
+    <span class="close-btn">&times;</span>
+    <div class="overlay-content">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Multifamily Projects</h1>
+      <p>Explore a selection of our current and past multifamily real estate projects across Arizona and beyond.</p>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="projects-section">
+    <div class="container">
+      <div class="projects-grid">
+
+        <!-- Project Card 1 -->
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400" alt="Project 1" />
+          <h3>Desert Oasis Apartments</h3>
+          <p>Phoenix, AZ – 80-unit mid-rise development focused on sustainable design and urban walkability.</p>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400" alt="Project 2" />
+          <h3>Sonoran Heights</h3>
+          <p>Tempe, AZ – Newly renovated 56-unit complex featuring modern amenities and green spaces.</p>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400" alt="Project 3" />
+          <h3>Canyon View Lofts</h3>
+          <p>Scottsdale, AZ – Luxury lofts designed with energy efficiency and open-plan living in mind.</p>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400" alt="Project 4" />
+          <h3>Vista Park Villas</h3>
+          <p>Chandler, AZ – Family-oriented community with smart home upgrades and park access.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Welker Properties. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const overlay = document.querySelector('.overlay');
+    const closeBtn = document.querySelector('.close-btn');
+
+    hamburger.addEventListener('click', () => {
+      document.body.classList.add('menu-open');
+      overlay.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      document.body.classList.remove
