@@ -158,3 +158,111 @@ body {
 body.menu-open .hamburger {
   display: none;
 }
+
+
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed;
+  color: #888;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+  font-size: 0.9rem;
+}
+
+.social-links a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.social-links a:hover {
+  color: #007BFF;
+}
+
+/* Responsive design tweaks */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Form page */
+.form-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+
