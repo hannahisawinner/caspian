@@ -634,6 +634,7 @@ market-section .market-card .market-overlay p {
 
 .about-hero .container {
   text-align: left;
+  background: rgba(0, 0, 0, 0.4); /* Adjust opacity for darkness */
 }
 
 
