@@ -26,13 +26,54 @@ body {
   /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
-.nav-links a {
-  text-decoration: none;
-  font-size: 1rem;
-  color: #333;
-  font-weight: 500;
+/* Show nav links on large screens */
+.nav-links,
+.desktop-menu {
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
+@media (max-width: 1000px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links,
+  .desktop-menu {
+    display: none !important;
+  }
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007BFF; /* Or use the exact blue if you prefer */
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
 
 .logo {
   font-size: 1.5rem;
@@ -116,24 +157,7 @@ body.menu-open .hamburger {
   z-index: 1101;
 }
 
-/* Show nav links on large screens */
-.nav-links,
-.desktop-menu {
-  display: flex !important;
-  gap: 20px;
-  align-items: center;
-}
 
-@media (max-width: 1000px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links,
-  .desktop-menu {
-    display: none !important;
-  }
-}
 
 
 /* Hero section */
