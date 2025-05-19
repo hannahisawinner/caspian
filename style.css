@@ -80,13 +80,12 @@ body {
   font-size: 2rem;
   cursor: pointer;
   display: none;
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  z-index: 1100;
   background: none;
   border: none;
   color: #000;
+  position: static;
+  align-self: center;
+  margin-left: auto;
 }
 
 /* Show hamburger on small screens */
