@@ -17,13 +17,17 @@ body {
 
 /* NAVBAR STYLES */
 .navbar {
-  position: relative;
+  position: fixed; /* Fixes the navbar to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Keep it above all other content */
+  background-color: #fff; /* Optional: ensures it doesn't turn transparent */
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  padding: 20px 40px;
-  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* subtle shadow for separation */
 }
 
 /* Logo */
