@@ -487,19 +487,18 @@ body.menu-open .hamburger {
 
 /* Project Card */
 .project-card {
-  background-color: #fdfdfd;
+  background-color: #000; /* fallback if image fails */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
 }
 
 .project-card img {
@@ -509,15 +508,23 @@ body.menu-open .hamburger {
   display: block;
 }
 
-.project-card h3 {
-  font-size: 1.25rem;
-  margin: 20px 20px 10px;
-  color: #222;
+/* New wrapper for the text section */
+.project-info {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  text-align: left;
 }
 
-.project-card p {
-  margin: 0 20px 20px;
-  color: #555;
+.project-info h3 {
+  font-size: 1.25rem;
+  margin: 0 0 10px;
+  color: white;
+}
+
+.project-info p {
+  margin: 0;
+  color: #ddd;
   font-size: 0.95rem;
   line-height: 1.5;
 }
