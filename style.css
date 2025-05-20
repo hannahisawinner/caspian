@@ -508,10 +508,10 @@ body.menu-open .hamburger {
 }
 
 .stat h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: navy;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .stat p {
