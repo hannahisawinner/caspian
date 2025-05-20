@@ -482,6 +482,25 @@ body.menu-open .hamburger {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  position: relative;
+  border-left: 2px dotted #ccc; /* Vertical dotted line */
+  padding-left: 20px; /* Space for the line */
+}
+
+.stat {
+  position: relative;
+  padding-left: 10px;
+}
+
+.stat::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: #555;
+  border-radius: 50%;
 }
 
 .stat h2 {
