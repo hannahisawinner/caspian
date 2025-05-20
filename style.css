@@ -484,26 +484,29 @@ body.menu-open .hamburger {
   justify-content: center;
   gap: 40px;
   margin-top: 40px;
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .stat {
   text-align: center;
   max-width: 160px;
   position: relative;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
+/* Dotted line between stats */
 .stat:not(:last-child)::after {
   content: "";
   position: absolute;
-  right: -20px;
-  top: 10%;
-  height: 80%;
+  top: 50%;
+  right: -20px; /* push to halfway between this and next stat */
+  transform: translateY(-50%);
+  height: 60%;
   width: 1px;
-  border-right: 2px dotted #ccc;
+  border-right: 2px dotted #bbb;
 }
 
 .stat h2 {
