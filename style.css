@@ -472,10 +472,29 @@ body.menu-open .hamburger {
   margin-bottom: 10px;
 }
 
-.projects-hero p {
+.hero-subtitle {
   font-size: 1.1rem;
   color: #666;
-  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stat h2 {
+  font-size: 2rem;
+  color: #111;
+  margin: 0;
+  font-weight: 700;
+}
+
+.stat p {
+  font-size: 1rem;
+  color: #666;
+  margin: 4px 0 0;
 }
 
 /* Projects Grid */
