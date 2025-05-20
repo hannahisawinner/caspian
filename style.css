@@ -506,7 +506,7 @@ body.menu-open .hamburger {
 
 /* Project Card */
 .project-card {
-  background-color: #000; /* fallback if image fails */
+  background-color: white; /* fallback if image fails */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
@@ -529,8 +529,8 @@ body.menu-open .hamburger {
 
 /* New wrapper for the text section */
 .project-info {
-  background-color: #000;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 20px;
   text-align: left;
 }
@@ -538,12 +538,12 @@ body.menu-open .hamburger {
 .project-info h3 {
   font-size: 1.25rem;
   margin: 0 0 10px;
-  color: white;
+  color: black;
 }
 
 .project-info p {
   margin: 0;
-  color: #ddd;
+  color: black;
   font-size: 0.95rem;
   line-height: 1.5;
 }
