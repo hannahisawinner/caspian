@@ -480,27 +480,30 @@ body.menu-open .hamburger {
 
 .stats {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  position: relative;
-  border-left: 2px dotted #ccc; /* Vertical dotted line */
-  padding-left: 20px; /* Space for the line */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .stat {
+  text-align: center;
+  max-width: 160px;
   position: relative;
-  padding-left: 10px;
+  padding: 0 20px;
 }
 
-.stat::before {
-  content: '';
+.stat:not(:last-child)::after {
+  content: "";
   position: absolute;
-  left: -11px;
-  top: 8px;
-  width: 8px;
-  height: 8px;
-  background-color: #555;
-  border-radius: 50%;
+  right: -20px;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  border-right: 2px dotted #ccc;
 }
 
 .stat h2 {
