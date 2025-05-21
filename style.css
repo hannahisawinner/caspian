@@ -585,7 +585,7 @@ body.menu-open .hamburger {
   }
 
   .projects-grid {
-    flex: 2;
+    grid-template-columns: repeat(3, 1fr); /* 3 cols on desktop view */
   }
 }
 
