@@ -22,7 +22,7 @@ body {
   padding: 0 20px;
 }
 
-/* NAVBAR STYLES */
+/*-------------------- NAVBAR STYLES -----------------------------------*/
 .navbar {
   position: fixed; /* Fixes the navbar to the top */
   top: 0;
@@ -277,7 +277,7 @@ body.menu-open .hamburger {
 
 
 
-/* Hero section */
+/* --------------------------Hero section ----------------------------*/
 .hero {
   text-align: center;
   padding: 100px 20px;
@@ -329,7 +329,7 @@ body.menu-open .hamburger {
 
 
 
-/* Markets and Recent Projects Section Link Panels */
+/* ---------------Markets and Recent Projects Section Link Panels--------------- */
 .section-links {
   display: flex;
   flex-wrap: wrap;
@@ -391,7 +391,7 @@ body.menu-open .hamburger {
 
 
 
-/* Footer */
+/* ----------------------------Footer-------------------------------- */
 .footer {
   margin-top: auto;
   text-align: center;
@@ -438,7 +438,7 @@ body.menu-open .hamburger {
 
 
 
-/* Projects Section */
+/* ------------------Projects Section------------------- */
 .projects-layout {
   background-color: #fff;
   padding: 80px 0;
@@ -596,7 +596,7 @@ body.menu-open .hamburger {
 
 
 
-/* Markets Section */
+/* -----------------------Markets Section ------------------------------*/
 .market-section {
   display: grid;
   grid-template-columns: 1fr; /* default: 1 column */
@@ -664,7 +664,7 @@ market-section .market-card .market-overlay p {
 
 
 
-/* About Section */
+/* ---------------------------About Section-------------------------------- */
 .about-content {
   background-color: #fdfdfd;
   padding: 40px 20px;
@@ -711,88 +711,42 @@ market-section .market-card .market-overlay p {
 
 
 
-/* ----------- Contact Us Form page ----------- */
-.form-container {
-  max-width: 600px;
-  margin: 80px auto;
-  padding: 30px;
+/* ------------------- Shared Form Styles ------------------- */
+/* body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f7f7f7;
+} */
+
+/* Form Wrapper */
+.form-wrapper {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px 25px;
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.form-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-form label {
-  display: block;
-  margin-top: 15px;
-  font-weight: 600;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-form button {
-  margin-top: 20px;
-  padding: 12px;
-  width: 100%;
-  font-size: 1rem;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #0056b3;
-}
-
-
-
-/* ---------- Invest Form Styles ---------- */
-.invest-container {
-  max-width: 720px;
-  margin: 60px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
-
-.invest-heading {
-  font-size: 2rem;
+/* Form Heading */
+.form-heading {
   text-align: center;
   margin-bottom: 30px;
+  font-size: 2rem;
   color: #222;
 }
 
-.invest-form {
+/* Form */
+form {
   display: flex;
   flex-direction: column;
 }
 
-.form-row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
+/* Form Group */
 .form-group {
-  flex: 1;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
 }
 
 .form-group label {
@@ -820,8 +774,9 @@ form button:hover {
   border-color: #007BFF;
 }
 
+/* Button */
 .submit-button {
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 12px;
   font-size: 1rem;
   font-weight: bold;
@@ -837,11 +792,14 @@ form button:hover {
   background-color: #0056b3;
 }
 
+/* Mobile adjustments */
 @media (max-width: 600px) {
-  .form-row {
-    flex-direction: column;
+  .form-wrapper {
+    margin: 20px 15px;
+    padding: 20px;
   }
 }
+
 
 
 
