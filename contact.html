@@ -10,7 +10,7 @@
 
   <main class="form-wrapper">
     <h1 class="form-heading">Contact Us</h1>
-    <form action="#" method="post">
+    <form id="contact-form">
       <div class="form-group">
         <label for="name">Name *</label>
         <input type="text" id="name" name="name" required />
@@ -32,8 +32,46 @@
       </div>
 
       <button type="submit" class="submit-button">Send Message</button>
+      <p id="form-response" style="margin-top: 15px; text-align: center;"></p>
     </form>
   </main>
 
+  <script>
+    const contactForm = document.getElementById('contact-form');
+    const responseEl = document.getElementById('form-response');
+
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const formData = {
+        formType: 'contact',
+        name: contactForm.name.value,
+        email: contactForm.email.value,
+        phone: contactForm.phone.value,
+        message: contactForm.message.value
+      };
+
+      try {
+        const res = await fetch('https://script.google.com/macros/s/AKfycby4OtjjgSDYyj1LafsRRfb1Kh017avCn8o_jQx51NH99u-CDoDdCsWN2T1YSUH-NzGF4Q/exec', {
+          method: 'POST',
+          body: JSON.stringify(formData),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        const result = await res.json();
+        if (result.result === 'success') {
+          responseEl.textContent = "✅ Message sent successfully!";
+          contactForm.reset();
+        } else {
+          responseEl.textContent = "❌ Something went wrong. Please try again.";
+        }
+      } catch (error) {
+        console.error(error);
+        responseEl.textContent = "⚠️ Error submitting the form.";
+      }
+    });
+  </script>
 </body>
 </html>
