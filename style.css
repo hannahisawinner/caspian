@@ -669,7 +669,6 @@ market-section .market-card .market-overlay p {
 } */
 
 .market-info {
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -677,6 +676,7 @@ market-section .market-card .market-overlay p {
 }
  
 .market-info h1 {
+  text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
 }
