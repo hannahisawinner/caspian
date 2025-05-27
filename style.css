@@ -699,7 +699,12 @@ market-section .market-card .market-overlay p {
   }
 }
 
-
+/* This ensures that at screen widths wider than 768px, the layout switches back to row. */
+@media (min-width: 769px) {
+  .market-details-section {
+    flex-direction: row !important;
+  }
+}
 
 
 
