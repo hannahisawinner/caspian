@@ -664,6 +664,7 @@ market-section .market-card .market-overlay p {
 
 /* ----------- Market Overview Page ----------- */
 .market-details-section {
+  flex: 1; /* to make it display as row in fullscreen not column */
   display: flex;
   flex-wrap: wrap;
   padding: 40px 20px;
