@@ -662,6 +662,45 @@ market-section .market-card .market-overlay p {
 
 
 
+/* ----------- Market Overview Page ----------- */
+.market-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.market-info {
+  flex: 1 1 400px;
+}
+
+.market-info h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.market-info ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.market-image {
+  flex: 1 1 400px;
+  min-height: 300px;
+  background: #eee center center / cover no-repeat;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .market-section {
+    flex-direction: column;
+  }
+}
+
+
+
 
 
 /* ---------------------------About Section-------------------------------- */
