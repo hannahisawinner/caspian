@@ -70,6 +70,25 @@
       </div>
 
       <div class="form-group">
+        <p style="font-style: italic; margin-bottom: 4px;">
+          (SEC regulations require us to verify investor status before sharing specific investment details.)
+        </p>
+        <label for="accredited">
+          Are you an accredited investor as defined by the SEC? (Single Select)<br />
+          <small>
+            (Accredited investors typically have a net worth of $1M+ excluding primary residence OR an annual income of $200K+ individually or $300K+ jointly for the past two years.)
+          </small>
+        </label>
+        <select id="accredited" name="accredited" required>
+          <option value="">Please select</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Unsure">Unsure</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
         <label for="notes">Additional Notes</label>
         <textarea id="notes" name="notes" rows="4"></textarea>
       </div>
