@@ -669,12 +669,22 @@ market-section .market-card .market-overlay p {
 
 
 /* ----------- Market Overview Page ----------- */
-/* .market-info {
-  flex: 1 1 400px;
-  text-align: center;
-} */
+/* Layout: Hero and image Wrapper */
+.projects-content-market {
+  display: flex;
+  flex-direction: column; /* Stack with hero above on small screens */
+  gap: 60px;
+}
+
+/* Responsive layout change for larger screens */
+@media (min-width: 992px) {
+  .projects-content-market {
+    flex-direction: row; /* Hero on left, grid on right */
+    align-items: flex-start;
+  }
 
 .market-info {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -693,26 +703,14 @@ market-section .market-card .market-overlay p {
 }
 
 .market-image {
-  flex: 1 1 400px;
+  flex: 1;
   min-height: 500px;
   min-width: 300px;
   background: #eee center center / cover no-repeat;
   border-radius: 10px;
 }
 
-/* Layout: Hero and image Wrapper */
-.projects-content-market {
-  display: flex;
-  flex-direction: column; /* Stack with hero above on small screens */
-  gap: 60px;
-}
 
-/* Responsive layout change for larger screens */
-@media (min-width: 992px) {
-  .projects-content-market {
-    flex-direction: row; /* Hero on left, grid on right */
-    align-items: flex-start;
-  }
 
 
 
