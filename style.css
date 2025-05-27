@@ -663,16 +663,6 @@ market-section .market-card .market-overlay p {
 
 
 /* ----------- Market Overview Page ----------- */
-.market-details-section {
-  flex: 1; /* to make it display as row in fullscreen not column */
-  display: flex;
-  flex-wrap: wrap;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
-  gap: 30px;
-}
-
 .market-info {
   flex: 1 1 400px;
 }
@@ -694,24 +684,10 @@ market-section .market-card .market-overlay p {
   border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-  .market-details-section {
-    flex-direction: column;
-  }
-}
 
-/* This ensures that at screen widths wider than 768px, the layout switches back to row. */
-@media (min-width: 769px) {
-  .market-details-section {
-    flex-direction: row !important;
-  }
-}
 
-/* adding temporarily to debug */
-/*
-.market-info, .market-image {
-  border: 2px dashed red;
-} */
+
+
 
 
 /* ---------------------------About Section-------------------------------- */
