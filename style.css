@@ -86,6 +86,12 @@ body {
   color: #000;
 }
 
+/* to keep the underline when tab is active */
+.nav-links a.active::after {
+  width: 100%;
+}
+
+
 /* Hamburger Menu */
 .hamburger {
   font-size: 2rem;
