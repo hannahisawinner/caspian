@@ -689,6 +689,7 @@ market-section .market-card .market-overlay p {
 .market-image {
   flex: 1 1 400px;
   min-height: 300px;
+  min-width: 300px;
   background: #eee center center / cover no-repeat;
   border-radius: 10px;
 }
