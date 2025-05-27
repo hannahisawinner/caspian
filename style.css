@@ -707,6 +707,10 @@ market-section .market-card .market-overlay p {
   }
 }
 
+/* adding temporarily to debug */
+.market-info, .market-image {
+  border: 2px dashed red;
+}
 
 
 /* ---------------------------About Section-------------------------------- */
