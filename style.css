@@ -665,7 +665,7 @@ market-section .market-card .market-overlay p {
 /* ----------- Market Overview Page ----------- */
 .market-info {
   flex: 1 1 400px;
-  justify-content: center;
+  text-align: center;
 }
  
 .market-info h1 {
