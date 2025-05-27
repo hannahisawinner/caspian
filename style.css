@@ -663,7 +663,7 @@ market-section .market-card .market-overlay p {
 
 
 /* ----------- Market Overview Page ----------- */
-.market-section {
+.market-details-section {
   display: flex;
   flex-wrap: wrap;
   padding: 40px 20px;
@@ -694,7 +694,7 @@ market-section .market-card .market-overlay p {
 }
 
 @media (max-width: 768px) {
-  .market-section {
+  .market-details-section {
     flex-direction: column;
   }
 }
