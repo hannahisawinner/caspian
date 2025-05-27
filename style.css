@@ -663,10 +663,10 @@ market-section .market-card .market-overlay p {
 
 
 /* ----------- Market Overview Page ----------- */
-.market-info {
+/* .market-info {
   flex: 1 1 400px;
 }
-
+ */
 .market-info h1 {
   font-size: 2rem;
   margin-bottom: 20px;
