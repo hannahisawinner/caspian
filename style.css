@@ -61,7 +61,7 @@ body {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  color: #001f3f; /* navy blue */
+  color: navy; /* navy blue */
   padding: 10px 0;
   transition: all 0.3s ease;
 }
@@ -74,7 +74,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #001f3f; /* navy blue underline */
+  background-color: navy; /* navy blue underline */
   transition: width 0.3s ease;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #001f3f; /* navy blue */
+  color: navy; /* navy blue */
 }
 
 /* to keep the underline when tab is active */
@@ -99,7 +99,7 @@ body {
   display: none;
   background: none;
   border: none;
-  color: #001f3f; /* navy blue */
+  color: navy; /* navy blue */
   position: static;
   align-self: center;
   margin-left: auto;
@@ -318,7 +318,7 @@ body.menu-open .hamburger {
 .cta-button {
   padding: 12px 24px;
   font-size: 1rem;
-  background-color: #001f3f; /* Navy Blue */ 
+  background-color: navy; /* Navy Blue */ 
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -480,7 +480,7 @@ body.menu-open .hamburger {
 }
 
 .projects-hero h1 {
-  color: #001f3f; /* Navy Blue */ 
+  color: navy; /* Navy Blue */ 
   font-size: 1.75rem;
   margin-bottom: 10px;
   min-width: 300px;
