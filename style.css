@@ -731,7 +731,6 @@ market-section .market-card .market-overlay p {
 @media (min-width: 992px) {
   .projects-content-market {
     flex-direction: row; /* Hero on left, grid on right */
-    align-items: flex-start;
   }
 
 
