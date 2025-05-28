@@ -483,6 +483,7 @@ body.menu-open .hamburger {
   font-size: 2.5rem;
   color: #222;
   margin-bottom: 10px;
+  min-width: 300px;
 }
 
 .hero-subtitle {
@@ -537,7 +538,7 @@ body.menu-open .hamburger {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+  gap: 30px;
 }
 
 /* Project Card */
