@@ -734,8 +734,7 @@ market-section .market-card .market-overlay p {
   }
 
   .market-image {
-    min-height: 700px;
-    min-width: 300px;
+    min-height: 730px; /* to make the image take up fullscreen height */
   }
 }
 
