@@ -701,11 +701,25 @@ market-section .market-card .market-overlay p {
 }
 
 .market-image {
+  position: relative;
   flex: 1 1 400px;
   min-height: 500px;
   min-width: 300px;
   background: #eee center center / cover no-repeat;
   border-radius: 10px;
+  overflow: hidden; /* ensures overlay stays inside rounded corners */
+}
+/* overlay on the image */
+.market-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* adjust opacity as needed */
+  border-radius: 10px; /* match parent */
+  z-index: 1;
 }
 
 /* Layout: Hero and image Wrapper */
