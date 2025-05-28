@@ -701,7 +701,7 @@ market-section .market-card .market-overlay p {
 .market-image {
   position: relative;
   flex: 1 1 400px;
-  min-height: 500px;
+  min-height: 300px;
   min-width: 300px;
   background: #eee center center / cover no-repeat;
   border-radius: 10px;
@@ -732,6 +732,12 @@ market-section .market-card .market-overlay p {
   .projects-content-market {
     flex-direction: row; /* Hero on left, grid on right */
   }
+
+  .market-image {
+    min-height: 700px;
+    min-width: 300px;
+  }
+}
 
 
 
