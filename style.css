@@ -862,12 +862,13 @@ form {
 
 /* Button */
 .submit-button {
-  margin-top: 10px;
+  margin: 10px auto 0; /* top margin 10px, auto left & right to center */
+  display: block;       /* make it behave like a block to center with margin auto */
   padding: 12px;
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
-  background-color: #007BFF;
+  background-color: navy;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -876,7 +877,7 @@ form {
 }
 
 .submit-button:hover {
-  background-color: #0056b3;
+  background-color: #003366;
 }
 
 textarea,
