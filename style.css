@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 100px; /* Adjust based on navbar height */
+  padding-top: 80px; /* Adjust based on navbar height */
 }
 
 .container {
