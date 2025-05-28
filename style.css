@@ -449,11 +449,17 @@ body.menu-open .hamburger {
 .projects-layout {
   background-color: #fff;
   padding: 80px 0;
+  display: flex; /* added */
+  justify-content: center;  /* horizontal centering */
+  align-items: center;      /* vertical centering */
+  min-height: 100vh;        /* make it fill the viewport */
+  box-sizing: border-box;
 }
 
 .projects-container {
   max-width: 1200px;
-  margin: 0 0;
+  width: 100%; /* added */
+/*   margin: 0 0; */
   padding: 0 20px;
 }
 
