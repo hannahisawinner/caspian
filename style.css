@@ -860,6 +860,12 @@ form {
   border-color: #007BFF;
 }
 
+label small {
+  font-weight: normal;
+  display: block; /* optional: helps with layout if you want it on its own line */
+  font-size: 0.85rem; /* optional: adjust size if needed */
+}
+
 /* Button */
 .submit-button {
   margin: 10px auto 0; /* top margin 10px, auto left & right to center */
