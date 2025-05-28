@@ -467,7 +467,7 @@ body.menu-open .hamburger {
 .projects-content {
   display: flex;
   flex-direction: column-reverse; /* Stack with hero below on small screens */
-  gap: 60px;
+  gap: 20px;
 }
 
 /* Hero Section */
