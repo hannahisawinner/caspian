@@ -597,6 +597,10 @@ body.menu-open .hamburger {
     text-align: center;
     align-items: center;
   }
+
+  .projects-hero h1 {
+    margin-top: 50px;
+  }
   
   .projects-grid {
     grid-template-columns: repeat(3, 1fr); /* 3 cols on desktop view */
