@@ -805,7 +805,8 @@ market-section .market-card .market-overlay p {
 
 /* Form Wrapper */
 .form-wrapper {
-  max-width: 700px;
+  min-width: 400px;
+  max-width: 700px; /* for the long blurbs on invest form */ 
   margin: 40px auto;
   padding: 30px 25px;
   background-color: #ffffff;
