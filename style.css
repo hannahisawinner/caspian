@@ -452,7 +452,7 @@ body.menu-open .hamburger {
   display: flex; /* added */
   justify-content: center;  /* horizontal centering */
   align-items: center;      /* vertical centering */
-  min-height: 100vh;        /* make it fill the viewport */
+  min-height: 80vh;        /* reduce from 100vh to decrease space at top and bottom */
   box-sizing: border-box;
 }
 
