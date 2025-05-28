@@ -496,7 +496,7 @@ body.menu-open .hamburger {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px; /* vertical spacing between stats */
+  gap: 20px; /* vertical spacing between stats below dots */
   margin-top: 40px;
   max-width: 600px;
   margin-left: auto;
