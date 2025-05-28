@@ -452,14 +452,13 @@ body.menu-open .hamburger {
   display: flex; /* added */
   justify-content: center;  /* horizontal centering */
   align-items: center;      /* vertical centering */
-  min-height: 85vh;        /* reduce from 100vh to decrease space at top and bottom */
+/*   min-height: 85vh;        /* reduce from 100vh to decrease space at top and bottom */ 
   box-sizing: border-box;
 }
 
 .projects-container {
   width: 100%; 
-  height: 100%; /*added*/
-  padding: 0 20px;
+  padding: 20px;
 }
 
 /* Layout: Hero and Grid Wrapper */
