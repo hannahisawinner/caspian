@@ -318,7 +318,7 @@ body.menu-open .hamburger {
 .cta-button {
   padding: 12px 24px;
   font-size: 1rem;
-  background-color: #001f3f; /* Navy Blue */
+  background-color: #001f3f; /* Navy Blue */ 
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -480,8 +480,8 @@ body.menu-open .hamburger {
 }
 
 .projects-hero h1 {
-  font-size: 2.5rem;
-  color: #222;
+  color: #001f3f; /* Navy Blue */ 
+  font-size: 1.5rem;
   margin-bottom: 10px;
   min-width: 300px;
 }
@@ -591,13 +591,13 @@ body.menu-open .hamburger {
     flex-direction: row; /* Hero on left, grid on right */
     align-items: flex-start;
   }
-
+  
   .projects-hero {
     flex: 1;
     text-align: center;
     align-items: center;
   }
-
+  
   .projects-grid {
     grid-template-columns: repeat(3, 1fr); /* 3 cols on desktop view */
   }
