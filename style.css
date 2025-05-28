@@ -768,7 +768,7 @@ market-section .market-card .market-overlay p {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* Dark overlay across entire section */
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay across entire section */
   z-index: 0;
 }
 
