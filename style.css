@@ -176,6 +176,7 @@ body.menu-open .hamburger {
 }
 
 
+/* ----------------------- Home carousel ----------------------- */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -413,7 +414,7 @@ body.menu-open .hamburger {
 }
 
 .social-links a:hover {
-  color: #007BFF;
+  text-decoration: underline; 
 }
 
 /* Responsive design tweaks */
@@ -683,8 +684,9 @@ market-section .market-card .market-overlay p {
 }
 
 .market-info ul {
+  list-style-type: disc;
   padding-left: 20px;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .market-image {
