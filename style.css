@@ -180,11 +180,9 @@ body.menu-open .hamburger {
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .carousel {
