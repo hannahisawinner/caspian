@@ -14,17 +14,17 @@
     <form id="invest-form">
       <div class="form-group">
         <label for="full-name">Full Name *</label>
-        <input type="text" id="full-name" name="fullName" required>
+        <input type="text" id="full-name" name="fullName" placeholder="Full Name" required>
       </div>
 
       <div class="form-group">
         <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
       </div>
 
       <div class="form-group">
-        <label for="phone">Phone Number *</label>
-        <input type="tel" id="phone" name="phone" required>
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone" required>
       </div>
 
       <div class="form-group">
@@ -63,12 +63,12 @@
 
       <div class="form-group">
         <p style="font-style: italic; margin-bottom: 4px;">
-          (SEC regulations require us to verify investor status before sharing specific investment details.)
+          SEC regulations require us to verify investor status before sharing specific investment details.
         </p>
         <label for="accredited">
           Are you an accredited investor as defined by the SEC?<br />
           <small>
-            (Accredited investors typically have a net worth of $1M+ excluding primary residence OR an annual income of $200K+ individually or $300K+ jointly for the past two years.)
+            Accredited investors typically have a net worth of $1M+ excluding primary residence OR an annual income of $200K+ individually or $300K+ jointly for the past two years.
           </small>
         </label>
         <select id="accredited" name="accredited" required>
@@ -81,7 +81,7 @@
       </div>
 
       <div class="form-group">
-        <label for="notes">Additional Notes</label>
+        <label for="notes">Any Additional Notes?</label>
         <textarea id="notes" name="notes" rows="4"></textarea>
       </div>
 
