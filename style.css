@@ -345,7 +345,7 @@ body.menu-open .hamburger {
 .section-link {
   position: relative;
   flex: 1 1 50%;
-  height: 300px;
+  height: 400px;
   background-size: cover;
   background-position: center;
   text-decoration: none;
