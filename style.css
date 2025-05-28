@@ -448,7 +448,7 @@ body.menu-open .hamburger {
 /* ------------------Projects Section------------------- */
 .projects-layout {
   background-color: #fff;
-  padding: 80px 0;
+  padding: 0 0; /* 80px 0*/ 
   display: flex; /* added */
   justify-content: center;  /* horizontal centering */
   align-items: center;      /* vertical centering */
