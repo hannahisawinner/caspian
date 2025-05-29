@@ -13,13 +13,13 @@
 
   <!-- Desktop Navbar -->
   <nav class="navbar">
-    <a href="index.html" class="logo">Caspian Capital</a>
+    <a href="../index.html" class="logo">Caspian Capital</a>
     <ul class="nav-links desktop-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="markets.html">Markets</a></li>
-      <li><a href="projects.html"class="active">Recent Projects</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="invest.html" target="_blank" rel="noopener noreferrer">Invest</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../markets.html">Markets</a></li>
+      <li><a href="../projects.html"class="active">Recent Projects</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../invest.html" target="_blank" rel="noopener noreferrer">Invest</a></li>
     </ul>
     <div class="hamburger" onclick="openMenu()">☰</div>
   </nav>
@@ -29,11 +29,11 @@
     <div class="overlay-content">
       <span class="close-btn" onclick="closeMenu()">✕</span>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="markets.html">Markets</a></li>
-        <li><a href="projects.html" class="active">Recent Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="invest.html" target="_blank" rel="noopener noreferrer">Invest</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../markets.html">Markets</a></li>
+        <li><a href="../projects.html" class="active">Recent Projects</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../invest.html" target="_blank" rel="noopener noreferrer">Invest</a></li>
       </ul>
     </div>
   </div>
@@ -50,7 +50,32 @@
     <ul id="property-extra"></ul>
   </div>
 
+   <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Caspian Capital Operations. All rights reserved.</p>
+    <div class="social-links">
+      <a href="../contact.html" target="_blank" rel="noopener noreferrer">Contact Us</a> | 
+      <a href="../invest.html" target="_blank" rel="noopener noreferrer">Investment Opportunities</a>
+    </div>
+  </footer>
+
+  <!-- Overlay Menu Scripts -->
+  <script>
+    function openMenu() {
+      document.getElementById("overlayMenu").classList.add("active");
+      document.body.classList.add("menu-open");
+    }
+
+    function closeMenu() {
+      document.getElementById("overlayMenu").classList.remove("active");
+      document.body.classList.remove("menu-open");
+    }
+  </script>
+
+<!--   scriipt for bringing in the property details -->
   <script src="details.js"></script>
+
+  
 </body>
   
 </html>
