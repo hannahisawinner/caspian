@@ -5,11 +5,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Property Details</title>
+  <title>Projects | Caspian Capital</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
   
 <body>
+
+  <!-- Desktop Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Caspian Capital</a>
+    <ul class="nav-links desktop-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="markets.html">Markets</a></li>
+      <li><a href="projects.html"class="active">Recent Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="invest.html" target="_blank" rel="noopener noreferrer">Invest</a></li>
+    </ul>
+    <div class="hamburger" onclick="openMenu()">☰</div>
+  </nav>
+
+  <!-- Overlay Menu -->
+  <div id="overlayMenu" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeMenu()">✕</span>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="markets.html">Markets</a></li>
+        <li><a href="projects.html" class="active">Recent Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="invest.html" target="_blank" rel="noopener noreferrer">Invest</a></li>
+      </ul>
+    </div>
+  </div>
+  
+
 
   <div class="property-details">
     <img id="property-image" alt="" class="property-image" />
