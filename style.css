@@ -940,7 +940,7 @@ select option {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.property-details img {
+.property-image {
   width: 100%;
   max-width: 480px;
   height: auto;
@@ -975,7 +975,7 @@ select option {
     align-items: center;
   }
 
-  .property-details img, .property-content {
+  .property-image, .property-content {
     flex: 1 1 100%;
     max-width: 100%;
   }
