@@ -5,7 +5,7 @@ const properties = {
     location: "San Antonio, TX",
     specs: "3 Br · 2 Ba",
     description: "One-story with a spacious backyard.",
-    image: "../images/PipersMeadow.jpg",
+    image: "../images/PipersMeadow",
     extraInfo: "Built in 2010 · 1,600 sqft · Large backyard · Quiet neighborhood"
   },
   "castle-hills": {
@@ -13,7 +13,7 @@ const properties = {
     location: "San Antonio, TX",
     specs: "4 Br · 2.5 Ba",
     description: "Two-story in a family-oriented neighborhood.",
-    image: "../images/CastleHills.jpg",
+    image: "../images/CastleHills",
     extraInfo: "Built in 2015 · 2,200 sqft · Walkable to schools · Updated kitchen"
   },
   "high-country": {
@@ -21,7 +21,7 @@ const properties = {
     location: "San Antonio, TX",
     specs: "3 Br · 2 Ba",
     description: "Open layout with easy access to main routes - 1604 and I-35.",
-    image: "../images/HighCountry.jpg",
+    image: "../images/HighCountry",
     extraInfo: "Built in 2012 · 1,800 sqft · Open-concept design · Near shopping centers"
   },
   // Add more properties here...
