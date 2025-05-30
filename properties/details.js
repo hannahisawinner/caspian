@@ -8,9 +8,9 @@ const properties = {
     image: "../images/PipersMeadow",
     extraInfo: "Built in 2010 · 1,600 sqft · Large backyard · Quiet neighborhood",
     beforeAfter: [
-      { after: "../images/pipersmeadow-after1.jpg", before: "../images/pipersmeadow-before1.jpg" },
-      { after: "../images/pipersmeadow-after2.jpg", before: "../images/pipersmeadow-before2.jpg" },
-      { after: "../images/pipersmeadow-after3.jpg", before: "../images/pipersmeadow-before3.jpg" }
+      { after: "../images/pipersmeadow-after1", before: "../images/pipersmeadow-before1" },
+      { after: "../images/pipersmeadow-after2", before: "../images/pipersmeadow-before2" },
+      { after: "../images/pipersmeadow-after3", before: "../images/pipersmeadow-before3" }
     ]
   },
   "castle-hills": {
@@ -21,9 +21,9 @@ const properties = {
     image: "../images/CastleHills",
     extraInfo: "Built in 2015 · 2,200 sqft · Walkable to schools · Updated kitchen",
     beforeAfter: [
-      { after: "../images/castlehills-after1.jpg", before: "../images/castlehills-before1.jpg" },
-      { after: "../images/castlehills-after2.jpg", before: "../images/castlehills-before2.jpg" },
-      { after: "../images/castlehills-after3.jpg", before: "../images/castlehills-before3.jpg" }
+      { after: "../images/castlehills-after1", before: "../images/castlehills-before1" },
+      { after: "../images/castlehills-after2", before: "../images/castlehills-before2" },
+      { after: "../images/castlehills-after3", before: "../images/castlehills-before3" }
     ]
   },
   "high-country": {
@@ -34,9 +34,9 @@ const properties = {
     image: "../images/HighCountry",
     extraInfo: "Built in 2012 · 1,800 sqft · Open-concept design · Near shopping centers",
     beforeAfter: [
-      { after: "../images/highcountry-after1.jpg", before: "../images/highcountry-before1.jpg" },
-      { after: "../images/highcountry-after2.jpg", before: "../images/highcountry-before2.jpg" },
-      { after: "../images/highcountry-after3.jpg", before: "../images/highcountry-before3.jpg" }
+      { after: "../images/highcountry-after1", before: "../images/highcountry-before1" },
+      { after: "../images/highcountry-after2", before: "../images/highcountry-before2" },
+      { after: "../images/highcountry-after3", before: "../images/highcountry-before3" }
     ]
   },
   // Add more properties here...
