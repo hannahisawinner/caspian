@@ -1031,7 +1031,7 @@ select option {
 /* Navigation Arrows for details page */
 .nav-arrows {
   position: fixed;
-  top: 70px; /* Adjust this based on your navbar height */
+  top: 78px; /* Adjust this based on your navbar height */
   bottom: 80px; /* Adjust this based on your footer height */
   width: 100%;
   pointer-events: none;
@@ -1077,8 +1077,7 @@ select option {
   }
 
   body:hover .nav-arrow {
-    opacity: 1;
-    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
   }
 
   body:hover .left-arrow:hover,
