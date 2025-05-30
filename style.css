@@ -1000,6 +1000,7 @@ select option {
   color: #666;
   margin-top: -10px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .before-after-gallery {
