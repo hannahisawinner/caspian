@@ -984,7 +984,6 @@ select option {
 
 /* Before & After Section */
 .before-after-section {
-  max-width: 1000px;
   margin: 20px auto;
   padding: 0 20px;
 }
@@ -1007,7 +1006,7 @@ select option {
 .before-after-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
 }
 
