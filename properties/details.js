@@ -165,5 +165,4 @@ function renderBeforeAfterImages(property) {
 }
 
 
-// Run on page load
-document.addEventListener("DOMContentLoaded", populatePropertyDetails);
+
