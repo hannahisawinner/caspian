@@ -8,10 +8,10 @@ const properties = {
     image: "../images/properties/PipersMeadow",
     extraInfo: "Built in 2010 · 1,600 sqft · Large backyard · Quiet neighborhood",
     beforeAfter: [
-      { after: "../images/pipersmeadow/after1", before: "../images/pipersmeadow/before1" },
-      { after: "../images/pipersmeadow/after2", before: "../images/pipersmeadow/before2" },
-      { after: "../images/pipersmeadow/after3", before: "../images/pipersmeadow/before3" },
-      { after: "../images/pipersmeadow/after4", before: "../images/pipersmeadow/before4" }
+      { after: "../images/properties/pipersmeadow/after1", before: "../images/properties/pipersmeadow/before1" },
+      { after: "../images/properties/pipersmeadow/after2", before: "../images/properties/pipersmeadow/before2" },
+      { after: "../images/properties/pipersmeadow/after3", before: "../images/properties/pipersmeadow/before3" },
+      { after: "../images/properties/pipersmeadow/after4", before: "../images/properties/pipersmeadow/before4" }
     ]
   },
   "castle-hills": {
@@ -22,10 +22,10 @@ const properties = {
     image: "../images/properties/CastleHills",
     extraInfo: "Built in 2015 · 2,200 sqft · Walkable to schools · Updated kitchen",
     beforeAfter: [
-      { after: "../images/castlehills/after1", before: "../images/castlehills/before1" },
-      { after: "../images/castlehills/after2", before: "../images/castlehills/before2" },
-      { after: "../images/castlehills/after3", before: "../images/castlehills/before3" },
-      { after: "../images/castlehills/after4", before: "../images/castlehills/before4" }
+      { after: "../images/properties/castlehills/after1", before: "../images/properties/castlehills/before1" },
+      { after: "../images/properties/castlehills/after2", before: "../images/properties/castlehills/before2" },
+      { after: "../images/properties/castlehills/after3", before: "../images/properties/castlehills/before3" },
+      { after: "../images/properties/castlehills/after4", before: "../images/properties/castlehills/before4" }
     ]
   },
   "high-country": {
@@ -36,10 +36,10 @@ const properties = {
     image: "../images/properties/HighCountry",
     extraInfo: "Built in 2012 · 1,800 sqft · Open-concept design · Near shopping centers",
     beforeAfter: [
-      { after: "../images/highcountry/after1", before: "../images/highcountry/before1" },
-      { after: "../images/highcountry/after2", before: "../images/highcountry/before2" },
-      { after: "../images/highcountry/after3", before: "../images/highcountry/before3" },
-      { after: "../images/highcountry/after4", before: "../images/highcountry/before4" }
+      { after: "../images/properties/highcountry/after1", before: "../images/properties/highcountry/before1" },
+      { after: "../images/properties/highcountry/after2", before: "../images/properties/highcountry/before2" },
+      { after: "../images/properties/highcountry/after3", before: "../images/properties/highcountry/before3" },
+      { after: "../images/properties/highcountry/after4", before: "../images/properties/highcountry/before4" }
     ]
   },
   // Add more properties here...
