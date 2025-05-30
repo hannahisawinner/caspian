@@ -409,6 +409,7 @@ body.menu-open .hamburger {
   color: #333;
   text-decoration: none;
   margin: 0 10px;
+  font-weight: bold;
 }
 
 .social-links a:hover {
