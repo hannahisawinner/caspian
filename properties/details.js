@@ -91,7 +91,7 @@ function renderNavigationArrows(currentId) {
     const leftArrow = document.createElement("a");
     leftArrow.href = `details.html?id=${prevId}`;
     leftArrow.className = "nav-arrow left-arrow";
-    leftArrow.innerHTML = "&#8592;";
+    leftArrow.innerHTML = "&#10094;";
     container.appendChild(leftArrow);
   }
 
@@ -100,7 +100,7 @@ function renderNavigationArrows(currentId) {
     const rightArrow = document.createElement("a");
     rightArrow.href = `details.html?id=${nextId}`;
     rightArrow.className = "nav-arrow right-arrow";
-    rightArrow.innerHTML = "&#8594;";
+    rightArrow.innerHTML = "&#10095;";
     container.appendChild(rightArrow);
   }
 
