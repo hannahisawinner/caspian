@@ -1028,5 +1028,53 @@ select option {
 
 
 
+/* Navigation Arrows for details page */
+.nav-arrows {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  pointer-events: none;
+  z-index: 999;
+  display: none;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #333;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  pointer-events: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.left-arrow {
+  left: 1rem;
+}
+
+.right-arrow {
+  right: 1rem;
+}
+
+/* Only show arrows on desktop */
+@media (min-width: 1024px) {
+  .nav-arrows {
+    display: block;
+  }
+
+  body:hover .nav-arrow {
+    opacity: 0;
+  }
+
+  body:hover .left-arrow:hover,
+  body:hover .right-arrow:hover {
+    opacity: 1;
+  }
+}
 
 
