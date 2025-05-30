@@ -995,6 +995,13 @@ select option {
   text-align: center;
 }
 
+.before-after-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
 .before-after-gallery {
   display: flex;
   flex-wrap: wrap;
