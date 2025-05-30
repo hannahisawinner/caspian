@@ -22,10 +22,10 @@ const properties = {
     image: "../images/properties/CastleHills",
     extraInfo: "Built in 2015 · 2,200 sqft · Walkable to schools · Updated kitchen",
     beforeAfter: [
-      { after: "../images/properties/castlehills/after1", before: "../images/properties/castlehills/before1" },
-      { after: "../images/properties/castlehills/after2", before: "../images/properties/castlehills/before2" },
-      { after: "../images/properties/castlehills/after3", before: "../images/properties/castlehills/before3" },
-      { after: "../images/properties/castlehills/after4", before: "../images/properties/castlehills/before4" }
+      { after: "../images/properties/castlehills/after1", before: "../images/properties/placeholder/before1" },
+      { after: "../images/properties/castlehills/after2", before: "../images/properties/placeholder/before2" },
+      { after: "../images/properties/castlehills/after3", before: "../images/properties/placeholder/before3" },
+      { after: "../images/properties/castlehills/after4", before: "../images/properties/placeholder/before4" }
     ]
   },
   "high-country": {
@@ -36,10 +36,10 @@ const properties = {
     image: "../images/properties/HighCountry",
     extraInfo: "Built in 2012 · 1,800 sqft · Open-concept design · Near shopping centers",
     beforeAfter: [
-      { after: "../images/properties/highcountry/after1", before: "../images/properties/highcountry/before1" },
-      { after: "../images/properties/highcountry/after2", before: "../images/properties/highcountry/before2" },
-      { after: "../images/properties/highcountry/after3", before: "../images/properties/highcountry/before3" },
-      { after: "../images/properties/highcountry/after4", before: "../images/properties/highcountry/before4" }
+      { after: "../images/properties/highcountry/after1", before: "../images/properties/placeholder/before1" },
+      { after: "../images/properties/highcountry/after2", before: "../images/properties/placeholder/before2" },
+      { after: "../images/properties/highcountry/after3", before: "../images/properties/placeholder/before3" },
+      { after: "../images/properties/highcountry/after4", before: "../images/properties/placeholder/before4" }
     ]
   },
   // Add more properties here...
