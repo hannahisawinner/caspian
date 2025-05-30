@@ -86,26 +86,31 @@ function renderNavigationArrows(currentId) {
   const container = document.createElement("div");
   container.className = "nav-arrows";
 
-  if (index > 0) {
-    const prevId = propertyOrder[index - 1];
-    const leftArrow = document.createElement("a");
-    leftArrow.href = `details.html?id=${prevId}`;
-    leftArrow.className = "nav-arrow left-arrow";
-    leftArrow.innerHTML = "&#10094;";
-    container.appendChild(leftArrow);
-  }
+  // Previous arrow (wrap from first to last)
+  const prevId = index === 0
+    ? propertyOrder[propertyOrder.length - 1]  // go to last
+    : propertyOrder[index - 1];
 
-  if (index < propertyOrder.length - 1) {
-    const nextId = propertyOrder[index + 1];
-    const rightArrow = document.createElement("a");
-    rightArrow.href = `details.html?id=${nextId}`;
-    rightArrow.className = "nav-arrow right-arrow";
-    rightArrow.innerHTML = "&#10095;";
-    container.appendChild(rightArrow);
-  }
+  const leftArrow = document.createElement("a");
+  leftArrow.href = `details.html?id=${prevId}`;
+  leftArrow.className = "nav-arrow left-arrow";
+  leftArrow.innerHTML = "&#10094;";
+  container.appendChild(leftArrow);
+
+  // Next arrow (wrap from last to first)
+  const nextId = index === propertyOrder.length - 1
+    ? propertyOrder[0]  // go to first
+    : propertyOrder[index + 1];
+
+  const rightArrow = document.createElement("a");
+  rightArrow.href = `details.html?id=${nextId}`;
+  rightArrow.className = "nav-arrow right-arrow";
+  rightArrow.innerHTML = "&#10095;";
+  container.appendChild(rightArrow);
 
   document.body.appendChild(container);
 }
+
 
 // Modify your DOMContentLoaded event
 document.addEventListener("DOMContentLoaded", () => {
