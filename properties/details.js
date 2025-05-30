@@ -80,6 +80,12 @@ function renderBeforeAfterImages(property) {
   heading.textContent = "Before & After";
   section.appendChild(heading);
 
+  // Add this small note under the heading
+  const note = document.createElement("p");
+  note.textContent = "Hover over image to view Before";
+  note.className = "before-after-note";
+  section.appendChild(note);
+
   const gallery = document.createElement("div");
   gallery.className = "before-after-gallery";
 
