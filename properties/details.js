@@ -45,6 +45,10 @@ const properties = {
   // Add more properties here...
 };
 
+// Order of properties from projects.html - for the arrows
+const propertyOrder = ["pipers-meadow", "castle-hills", "high-country"];
+
+
 // Helper to get URL parameter
 function getPropertyIdFromURL() {
   const params = new URLSearchParams(window.location.search);
@@ -69,10 +73,50 @@ function populatePropertyDetails() {
   document.getElementById("property-image").src = property.image;
   document.getElementById("property-image").alt = property.title;
 
-  // ✅ Add this line to inject the Before & After section
+  // Add this line to inject the Before & After section
   renderBeforeAfterImages(property);
 }
 
+
+// for the arrows
+function renderNavigationArrows(currentId) {
+  const index = propertyOrder.indexOf(currentId);
+  if (index === -1) return;
+
+  const container = document.createElement("div");
+  container.className = "nav-arrows";
+
+  if (index > 0) {
+    const prevId = propertyOrder[index - 1];
+    const leftArrow = document.createElement("a");
+    leftArrow.href = `details.html?id=${prevId}`;
+    leftArrow.className = "nav-arrow left-arrow";
+    leftArrow.innerHTML = "&#8592;";
+    container.appendChild(leftArrow);
+  }
+
+  if (index < propertyOrder.length - 1) {
+    const nextId = propertyOrder[index + 1];
+    const rightArrow = document.createElement("a");
+    rightArrow.href = `details.html?id=${nextId}`;
+    rightArrow.className = "nav-arrow right-arrow";
+    rightArrow.innerHTML = "&#8594;";
+    container.appendChild(rightArrow);
+  }
+
+  document.body.appendChild(container);
+}
+
+// Modify your DOMContentLoaded event
+document.addEventListener("DOMContentLoaded", () => {
+  const propertyId = getPropertyIdFromURL();
+  populatePropertyDetails();
+  renderNavigationArrows(propertyId);
+});
+
+
+
+// for before and after images
 function renderBeforeAfterImages(property) {
   if (!property.beforeAfter || !property.beforeAfter.length) return;
 
