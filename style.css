@@ -839,8 +839,9 @@ market-section .market-card .market-overlay p {
   flex-direction: column;
   gap: 30px;
   max-width: 1200px;
-  margin: 40px;
+  padding: 80px 20px; /* <-- replaces margin */
   width: 100%;
+  margin: 0 auto; /* centers the content within the hero */
 }
 
 @media (min-width: 768px) {
