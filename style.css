@@ -839,7 +839,7 @@ market-section .market-card .market-overlay p {
   flex-direction: column;
   gap: 30px;
   max-width: 1200px;
-  margin: 40px 20px 20px 20px;
+  margin: 40px;
   width: 100%;
 }
 
