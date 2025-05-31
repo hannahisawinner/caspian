@@ -698,6 +698,14 @@ market-section .market-card .market-overlay p {
   line-height: 1.8;
 }
 
+.map-embed-box {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 .market-image {
   position: relative;
   flex: 1 1 400px;
