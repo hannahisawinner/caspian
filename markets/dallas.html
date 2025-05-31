@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DFW Market Overview</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <!-- Desktop Navbar -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">Caspian Capital</a>
+    <ul class="nav-links desktop-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../markets.html" class="active">Markets</a></li>
+      <li><a href="../projects.html">Recent Projects</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../invest.html" target="_blank" rel="noopener noreferrer">Invest</a></li>
+    </ul>
+    <div class="hamburger" onclick="openMenu()">☰</div>
+  </nav>
+
+  <!-- Overlay Menu -->
+  <div id="overlayMenu" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeMenu()">✕</span>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../markets.html" class="active">Markets</a></li>
+        <li><a href="../projects.html">Recent Projects</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../invest.html" target="_blank" rel="noopener noreferrer">Invest</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Info Section -->
+  <section class="projects-layout">
+    <div class="projects-container">
+
+      <!-- Hero + Grid Wrapper -->
+      <div class="projects-content-market">
+
+        <!-- Hero Section -->
+        <div class="market-info">
+          <h1>Why Dallas–Fort Worth?</h1>
+          <ul>
+            <li>DFW is the 4th largest metro in the US, with continued strong population growth.</li>
+            <li>Major business hub with Fortune 500 HQs including AT&T, ExxonMobil, and American Airlines.</li>
+            <li>Robust job growth fueled by tech, logistics, healthcare, and finance sectors.</li>
+            <li>Diverse economy and low tax burden with no state income tax.</li>
+            <li>Growing rental demand due to high in-migration and rising home prices.</li>
+            <li>Strategic location with major airports and infrastructure investments.</li>
+            <li>Ranked among the top US real estate markets for institutional capital (PwC, 2024).</li>
+          </ul>
+
+          <div class="map-embed-box">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d279056.8!2d-97.3!3d32.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1717110000001!5m2!1sen!2sus"
+              width="100%"
+              height="350"
+              style="border:0; border-radius:12px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="market-image" style="background-image: url('../images/markets/dallas2');">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Caspian Capital Operations. All rights reserved.</p>
+    <div class="social-links">
+      <a href="../contact.html" target="_blank" rel="noopener noreferrer">Contact Us</a> | 
+      <a href="../invest.html" target="_blank" rel="noopener noreferrer">Investment Opportunities</a>
+    </div>
+  </footer>
+
+  <!-- Overlay Menu Scripts -->
+  <script>
+    function openMenu() {
+      document.getElementById("overlayMenu").classList.add("active");
+      document.body.classList.add("menu-open");
+    }
+
+    function closeMenu() {
+      document.getElementById("overlayMenu").classList.remove("active");
+      document.body.classList.remove("menu-open");
+    }
+  </script>
+
+</body>
+</html>
