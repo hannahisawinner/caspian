@@ -801,6 +801,84 @@ market-section .market-card .market-overlay p {
 
 
 
+
+
+
+
+
+
+
+
+
+/* Fullscreen hero section with background image */
+.dfw-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  color: white;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+/* Overlay with semi-transparent background */
+.dfw-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  z-index: 0;
+}
+
+/* Flex container inside the overlay */
+.dfw-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .dfw-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/* Left column: text */
+.dfw-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.dfw-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.dfw-text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+/* Right column: map */
+.dfw-map {
+  flex: 1;
+  min-height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+
 /* ---------------------------About Section-------------------------------- */
 .about-content {
   background-color: #fdfdfd;
