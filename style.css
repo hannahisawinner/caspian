@@ -734,7 +734,7 @@ market-section .market-card .market-overlay p {
 .projects-content-market {
   display: flex;
   flex-direction: column; /* Stack with hero above on small screens */
-  gap: 60px;
+  gap: 20px;
 }
 
 /* Responsive layout change for larger screens */
