@@ -818,7 +818,7 @@ market-section .market-card .market-overlay p {
   background-repeat: no-repeat;
   padding: 80px 20px;
   color: white;
-  min-height: 800px;
+  min-height: 750px;
   display: flex;
   align-items: center;
 }
