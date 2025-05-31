@@ -1032,7 +1032,7 @@ select option {
 .nav-arrows {
   position: fixed;
   top: 78px; /* Adjust this based on your navbar height */
-  bottom: 80px; /* Adjust this based on your footer height */
+  bottom: 84px; /* Adjust this based on your footer height */
   width: 100%;
   pointer-events: none;
   z-index: 999;
