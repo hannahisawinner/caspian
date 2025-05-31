@@ -882,6 +882,29 @@ market-section .market-card .market-overlay p {
   display: flex; /* optional: helps in some edge cases */
 }
 
+.dfw-map-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.dfw-map iframe {
+  flex: 1;
+}
+
+.dfw-map-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
 
 /* ---------------------------About Section-------------------------------- */
 .about-content {
