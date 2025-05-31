@@ -868,8 +868,16 @@ market-section .market-card .market-overlay p {
   font-size: 1.4rem;
   list-style-type: disc;
   padding-left: 20px;
-  padding-right: 20px;
-  line-height: 2.2;
+  padding-right: 40px;
+}
+
+.dfw-text ul li {
+  margin-bottom: 1em;
+  line-height: 1.4;
+}
+
+.dfw-text ul li + li {
+  margin-top: 0.6em;
 }
 
 /* Right column: map */
