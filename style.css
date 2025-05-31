@@ -865,9 +865,11 @@ market-section .market-card .market-overlay p {
 }
 
 .dfw-text ul {
+  font-size: 1.4rem;
   list-style-type: disc;
   padding-left: 20px;
-  line-height: 1.8;
+  padding-right: 20px;
+  line-height: 2.2;
 }
 
 /* Right column: map */
@@ -891,6 +893,7 @@ market-section .market-card .market-overlay p {
 
 .dfw-map iframe {
   flex: 1;
+  min-height: 200px;
 }
 
 .dfw-map-image {
