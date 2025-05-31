@@ -821,6 +821,7 @@ market-section .market-card .market-overlay p {
   min-height: 600px;
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 /* Overlay with semi-transparent background */
