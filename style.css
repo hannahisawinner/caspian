@@ -911,6 +911,80 @@ market-section .market-card .market-overlay p {
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
+/* Responsive adjustments */
+    @media (max-width: 767px) {
+      .dfw-hero {
+        padding-bottom: 0;
+      }
+
+      .dfw-content {
+        flex-direction: column;
+      }
+
+      .dfw-map-section {
+        background: white;
+        padding: 40px 20px;
+        display: block;
+      }
+
+      .dfw-map {
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .dfw-map-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .dfw-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .dfw-content > .dfw-text {
+        flex: 1;
+      }
+
+      .dfw-content > .dfw-map-section {
+        flex: 1;
+        background: transparent;
+        padding: 0;
+      }
+    }
+
+    .dfw-map-section {
+      background: white;
+      padding: 40px 20px;
+    }
+
+    .dfw-map {
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .dfw-map iframe {
+      flex: 1;
+      min-height: 200px;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .dfw-map-image {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+
+
 
 
 
