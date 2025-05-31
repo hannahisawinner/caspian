@@ -675,6 +675,13 @@ market-section .market-card .market-overlay p {
   padding: 4px 0;
 }
 
+/* Responsive layout change for larger screens */
+@media (min-width: 992px) {
+  .market-card {
+    height: 400px; /* make them taller on fullscreen */
+  }
+}
+
 
 
 
