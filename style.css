@@ -696,6 +696,7 @@ market-section .market-card .market-overlay p {
   list-style-type: disc;
   padding-left: 20px;
   line-height: 1.8;
+  max-width: 520px;
 }
 
 .map-embed-box {
