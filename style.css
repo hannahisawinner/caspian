@@ -702,7 +702,8 @@ market-section .market-card .market-overlay p {
   margin-top: 20px;
   border-radius: 12px;
   overflow: hidden;
-  max-width: 100%;
+  width: 100%;
+  height: 300px; /* You can tweak this for more or less height */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
