@@ -810,180 +810,90 @@ market-section .market-card .market-overlay p {
 
 
 
-/* Fullscreen hero section with background image */
+/* Hero Section */
 .dfw-hero {
   position: relative;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  padding: 80px 20px;
   color: white;
-  min-height: 775px;
+  padding: 100px 20px;
+  min-height: 700px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: left;
 }
 
-/* Overlay with semi-transparent background */
 .dfw-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
-/* Flex container inside the overlay */
 .dfw-content {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 1200px;
-  padding: 80px 20px; /* <-- replaces margin */
+  max-width: 1000px;
   width: 100%;
-  margin: 0 auto; /* centers the content within the hero */
 }
 
-@media (min-width: 768px) {
-  .dfw-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-}
-
-/* Left column: text */
-.dfw-text {
-  flex: 1;
-  max-width: 600px;
-}
-
+/* Text */
 .dfw-text h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.8rem);
   margin-bottom: 20px;
-  color: white;
 }
 
 .dfw-text ul {
-  font-size: 1.4rem;
-  list-style-type: disc;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
   padding-left: 20px;
-  padding-right: 40px;
 }
 
-.dfw-text ul li {
-  margin-bottom: 1em;
-  line-height: 1.4;
+/* Map Section */
+.dfw-map-section {
+  background: white;
+  padding: 60px 20px;
 }
 
-.dfw-text ul li + li {
-  margin-top: 0.6em;
-}
-
-/* Right column: map */
 .dfw-map {
-  flex: 1;
-  min-height: 350px;
-  height: 100%;
-  width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-/*   box-shadow: 0 2px 8px rgba(0,0,0,0.3); */
-  display: flex; /* optional: helps in some edge cases */
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .dfw-map-inner {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 100%;
+}
+
+.dfw-map iframe,
+.dfw-map-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .dfw-map iframe {
-  flex: 1;
-  min-height: 200px;
+  height: 300px;
 }
 
-.dfw-map-image {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .dfw-hero {
+    padding: 60px 20px;
+    min-height: auto;
+    text-align: left;
+  }
+
+  .dfw-text ul {
+    padding-left: 15px;
+  }
+
+  .dfw-map iframe {
+    height: 250px;
+  }
 }
-
-/* Responsive adjustments */
-    @media (max-width: 767px) {
-      .dfw-hero {
-        padding-bottom: 0;
-      }
-
-      .dfw-content {
-        flex-direction: column;
-      }
-
-      .dfw-map-section {
-        background: white;
-        padding: 40px 20px;
-        display: block;
-      }
-
-      .dfw-map {
-        background: transparent;
-        padding: 0;
-        box-shadow: none;
-      }
-
-      .dfw-map-inner {
-        flex-direction: column;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .dfw-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
-      }
-
-      .dfw-content > .dfw-text {
-        flex: 1;
-      }
-
-      .dfw-content > .dfw-map-section {
-        flex: 1;
-        background: transparent;
-        padding: 0;
-      }
-    }
-
-    .dfw-map-section {
-      background: white;
-      padding: 40px 20px;
-    }
-
-    .dfw-map {
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .dfw-map iframe {
-      flex: 1;
-      min-height: 200px;
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    .dfw-map-image {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-
-
 
 
 
