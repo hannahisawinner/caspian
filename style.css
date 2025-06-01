@@ -815,13 +815,13 @@ market-section .market-card .market-overlay p {
   background-size: cover;
   background-position: center;
   position: relative;
-  min-height: 100vh;
+  height: calc(50vh - 40px); /* 50% of viewport height minus half navbar (adjust as needed) */
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 .dfw-overlay {
@@ -887,6 +887,7 @@ market-section .market-card .market-overlay p {
 /* Responsive behavior */
 @media (max-width: 768px) {
   .dfw-hero {
+    height: auto;
     padding: 60px 15px;
     text-align: center;
   }
