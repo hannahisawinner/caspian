@@ -868,11 +868,12 @@ market-section .market-card .market-overlay p {
   gap: 20px;
   flex-wrap: wrap;
   margin: 0;
+  
 }
 
 .dfw-map-container,
 .dfw-image-container {
-  flex: 1 1 500px;
+  flex: 1 1 auto; /* Let content decide height/width */
   min-width: 300px;
 }
 
