@@ -822,6 +822,7 @@ market-section .market-card .market-overlay p {
   color: white;
   text-align: center;
   padding: 20px;
+  overflow: hidden; /* Prevent content spill */
 }
 
 .dfw-overlay {
@@ -832,6 +833,7 @@ market-section .market-card .market-overlay p {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  height: 100%;  /* Ensure full height */
 }
 
 .dfw-hero-content {
@@ -857,6 +859,7 @@ market-section .market-card .market-overlay p {
 .dfw-map-image-section {
   background: white;
   padding: 20px;
+  margin: 0;
 }
 
 .dfw-map-image-wrapper {
@@ -864,6 +867,7 @@ market-section .market-card .market-overlay p {
   flex-direction: row;
   gap: 20px;
   flex-wrap: wrap;
+  margin: 0;
 }
 
 .dfw-map-container,
@@ -874,6 +878,7 @@ market-section .market-card .market-overlay p {
 
 .dfw-map-container iframe,
 .dfw-image-container img {
+  margin: 0;
   width: 100%;
   height: 100%;
   max-height: 300px;
@@ -885,9 +890,13 @@ market-section .market-card .market-overlay p {
 /* Responsive behavior */
 @media (max-width: 768px) {
   .dfw-hero {
-    height: auto;
+    min-height: 60vh; /* Enforces visual space for text */
     padding: 60px 15px;
     text-align: center;
+  }
+
+  .dfw-hero-content h1 {
+    font-size: 2rem;
   }
 
   .dfw-hero-content ul {
