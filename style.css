@@ -856,15 +856,13 @@ market-section .market-card .market-overlay p {
 /* Map + Image Section */
 .dfw-map-image-section {
   background: white;
-  padding: 60px 20px;
+  padding: 20px;
 }
 
 .dfw-map-image-wrapper {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
   flex-wrap: wrap;
 }
 
@@ -878,10 +876,10 @@ market-section .market-card .market-overlay p {
 .dfw-image-container img {
   width: 100%;
   height: 100%;
-  max-height: 400px;
+  max-height: 300px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+/*   border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15); */
 }
 
 /* Responsive behavior */
