@@ -44,23 +44,19 @@
     contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
 
-      const formData = {
-        formType: 'contact',
-        name: contactForm.name.value,
-        email: contactForm.email.value,
-        phone: contactForm.phone.value,
-        message: contactForm.message.value
-      };
-
+      const formData = new FormData();
+      formData.append('formType', 'contact');
+      formData.append('name', contactForm.name.value);
+      formData.append('email', contactForm.email.value);
+      formData.append('phone', contactForm.phone.value);
+      formData.append('message', contactForm.message.value);
+    
       try {
         const res = await fetch('https://script.google.com/macros/s/AKfycbxJj9X0POKN7Ht0rk3awdGp5MUQQvNsh7KcyQn8JyKEALWdJn5oyVqY0ELoh0hA6-V-rQ/exec', {
           method: 'POST',
-          body: JSON.stringify(formData),
-          headers: {
-            'Content-Type': 'application/json'
-          }
+          body: formData
         });
-
+    
         const result = await res.json();
         if (result.result === 'success') {
           responseEl.textContent = "✅ Message sent successfully!";
