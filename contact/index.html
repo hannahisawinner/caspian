@@ -64,10 +64,10 @@
         } else {
           responseEl.textContent = "❌ Something went wrong. Please try again.";
         }
-      // } catch (error) {
-      //   console.error(error);
-      //   responseEl.textContent = "⚠️ Error submitting the form.";
-      // }
+      } catch (error) {
+        console.error(error);
+        responseEl.textContent = "⚠️ Error submitting the form.";
+      }
     });
   </script>
 </body>
