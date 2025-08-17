@@ -94,40 +94,41 @@
   </main>
 
   <script>
-    document.getElementById('invest-form').addEventListener('submit', function(e) {
-      e.preventDefault();
+  document.getElementById('invest-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
 
-      const form = e.target;
-      const data = {
-        formType: "invest",  
-        fullName: form.fullName.value,
-        email: form.email.value,
-        phone: form.phone.value,
-        investorType: form.investorType.value,
-        accreditedStatus: form.accreditedStatus.value,
-        timeline: form.timeline.value,
-        budget: form.budget.value,
-        notes: form.notes.value
-      };
+    const form = e.target;
+    const data = new URLSearchParams();
+    data.append('formType', 'invest');
+    data.append('fullName', form.fullName.value);
+    data.append('email', form.email.value);
+    data.append('phone', form.phone.value);
+    data.append('investorType', form.investorType.value);
+    data.append('accredited', form.accreditedStatus.value); // match Apps Script
+    data.append('timeline', form.timeline.value);
+    data.append('budget', form.budget.value);
+    data.append('message', form.notes.value); // match "message" in Apps Script
 
-      fetch('https://script.google.com/macros/s/AKfycbyZAc5-LouC4Ol6M1vs78YmJ__SivZTjeXhlHKa6oRNMB9LNR4mzt11KXNRA4xfQ95Tyg/exec', {
+    try {
+      const res = await fetch('https://script.google.com/macros/s/AKfycbyZAc5-LouC4Ol6M1vs78YmJ__SivZTjeXhlHKa6oRNMB9LNR4mzt11KXNRA4xfQ95Tyg/exec', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-      .then(response => {
-        if (response.ok) {
-          form.style.display = 'none';
-          document.getElementById('confirmation').style.display = 'block';
-        } else {
-          alert('Something went wrong. Please try again.');
-        }
-      })
-      .catch(error => {
-        alert('Error: ' + error.message);
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data
       });
-    });
-  </script>
+
+      const result = await res.json();
+      if (result.result === 'success') {
+        form.style.display = 'none';
+        document.getElementById('confirmation').style.display = 'block';
+      } else {
+        alert('❌ Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      alert('⚠️ Error: ' + error.message);
+    }
+  });
+</script>
+
 
 </body>
 </html>
