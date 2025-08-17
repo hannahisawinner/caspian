@@ -38,37 +38,39 @@
   </main>
 
   <script>
-    const contactForm = document.getElementById('contact-form');
-    const responseEl = document.getElementById('form-response');
+  const contactForm = document.getElementById('contact-form');
+  const responseEl = document.getElementById('form-response');
 
-    contactForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
 
-      const formData = new FormData();
-      formData.append('formType', 'contact');
-      formData.append('name', contactForm.name.value);
-      formData.append('email', contactForm.email.value);
-      formData.append('phone', contactForm.phone.value);
-      formData.append('message', contactForm.message.value);
-    
-      try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbyZAc5-LouC4Ol6M1vs78YmJ__SivZTjeXhlHKa6oRNMB9LNR4mzt11KXNRA4xfQ95Tyg/exec', {
-          method: 'POST',
-          body: formData
-        });
-    
-        const result = await res.json();
-        if (result.result === 'success') {
-          responseEl.textContent = "✅ Message sent successfully!";
-          contactForm.reset();
-        } else {
-          responseEl.textContent = "❌ Something went wrong. Please try again.";
-        }
-      } catch (error) {
-        console.error(error);
-        responseEl.textContent = "⚠️ Error submitting the form.";
+    const data = new URLSearchParams();
+    data.append('formType', 'contact');
+    data.append('name', contactForm.name.value);
+    data.append('email', contactForm.email.value);
+    data.append('phone', contactForm.phone.value);
+    data.append('message', contactForm.message.value);
+
+    try {
+      const res = await fetch('https://script.google.com/macros/s/AKfycbyZAc5-LouC4Ol6M1vs78YmJ__SivZTjeXhlHKa6oRNMB9LNR4mzt11KXNRA4xfQ95Tyg/exec', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data
+      });
+
+      const result = await res.json();
+      if (result.result === 'success') {
+        contactForm.reset();
+        responseEl.textContent = "✅ Message sent successfully!";
+      } else {
+        responseEl.textContent = "❌ Something went wrong. Please try again.";
       }
-    });
-  </script>
+    } catch (error) {
+      console.error(error);
+      responseEl.textContent = "⚠️ Error submitting the form.";
+    }
+  });
+</script>
+
 </body>
 </html>
