@@ -37,13 +37,29 @@
     </form>
   </main>
 
+  // Script for submitting the Contact Form
   <script>
   const contactForm = document.getElementById('contact-form');
   const responseEl = document.getElementById('form-response');
 
+  function showMessage(message, color = 'green') {
+    responseEl.textContent = message;
+    responseEl.style.color = color;
+    responseEl.classList.add('show');
+  
+    // Hide after 3 seconds with fade out
+    setTimeout(() => {
+      responseEl.classList.remove('show');
+      setTimeout(() => {
+        responseEl.textContent = '';
+      }, 500); // allow fade-out transition
+    }, 3000); // Hide after 3 seconds 
+  }
+
   contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
 
+    // Prepare data using URLSearchParams to avoid CORS preflight
     const data = new URLSearchParams();
     data.append('formType', 'contact');
     data.append('name', contactForm.name.value);
@@ -54,20 +70,22 @@
     try {
       const res = await fetch('https://script.google.com/macros/s/AKfycbyZAc5-LouC4Ol6M1vs78YmJ__SivZTjeXhlHKa6oRNMB9LNR4mzt11KXNRA4xfQ95Tyg/exec', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: { 
+          'Content-Type': 'application/x-www-form-urlencoded' 
+        },
         body: data
       });
 
       const result = await res.json();
       if (result.result === 'success') {
         contactForm.reset();
-        responseEl.textContent = "✅ Message sent successfully!";
+        showMessage("✅ Message sent successfully!");
       } else {
-        responseEl.textContent = "❌ Something went wrong. Please try again.";
+        showMessage("❌ Something went wrong. Please try again.", 'darkred');
       }
     } catch (error) {
-      console.error(error);
-      responseEl.textContent = "⚠️ Error submitting the form.";
+      console.error('Form submission failed:', error);
+      showMessage("⚠️ Error submitting the form: " + error.message, 'darkred');
     }
   });
 </script>
