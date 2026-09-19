@@ -1282,6 +1282,68 @@ select option {
 }
 
 
+/* ===== Invest form: thank-you state ===== */
+.form-wrapper.is-thankyou .form-heading,
+.form-wrapper.is-thankyou .form-back-link {
+  display: none;
+}
+
+.form-wrapper.is-thankyou {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 420px;
+}
+
+/* In the modal, fill the whole frame so the window doesn't shrink after submitting */
+html.embedded .form-wrapper.is-thankyou {
+  min-height: 100vh;
+}
+
+.form-wrapper.is-thankyou .thank-you {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  animation: thank-you-in 0.5s ease-out both;
+}
+
+.thank-you-logo {
+  width: min(240px, 70%);
+  height: auto;
+}
+
+.thank-you-text {
+  max-width: 22em;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #10385C; /* same navy as the logo wordmark */
+}
+
+.thank-you-back {
+  font-size: 0.95rem;
+  color: navy;
+  text-decoration: none;
+}
+
+.thank-you-back:hover,
+.thank-you-back:focus-visible {
+  text-decoration: underline;
+}
+
+html.embedded .thank-you-back { display: none; }
+
+@keyframes thank-you-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-wrapper.is-thankyou .thank-you { animation: none; }
+}
+
 /* ===== Contact / Invest modal (see modal.js) ===== */
 .site-modal {
   margin: auto; /* the global reset zeroes dialog's built-in centering margin */
@@ -1299,6 +1361,11 @@ select option {
 
 .site-modal[open] {
   animation: site-modal-in 0.18s ease-out;
+}
+
+.site-modal.is-closing {
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
 .site-modal::backdrop {

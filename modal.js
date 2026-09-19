@@ -101,7 +101,7 @@
   function wasSubmitted() {
     try {
       var thanks = frame.contentDocument.getElementById("confirmation");
-      return !!thanks && thanks.style.display !== "none";
+      return !!thanks && !thanks.hidden; // thank-you message is showing
     } catch (e) { return false; }
   }
 
@@ -116,9 +116,18 @@
       frame.src = path;
       currentPath = path;
     }
+    dialog.classList.remove("is-closing");
     lockScroll();
     dialog.showModal();
   }
+
+  // The Invest form asks to be closed a few seconds after the thank-you message appears.
+  window.addEventListener("message", function (e) {
+    if (e.origin !== window.location.origin || !dialog || !dialog.open) return;
+    if (e.source !== frame.contentWindow || !e.data || e.data.type !== "site-modal:request-close") return;
+    dialog.classList.add("is-closing"); // quick fade, then close
+    setTimeout(closeModal, 250);
+  });
 
   document.addEventListener("click", function (e) {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;

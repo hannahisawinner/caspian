@@ -106,13 +106,28 @@
       <button type="submit" class="submit-button">Submit</button>
     </form>
 
-    <div id="confirmation" style="display:none; margin-top:20px; text-align:center; font-size:1.1rem; color:green;">
-      Thank you! Your information has been submitted.
+    <div id="confirmation" class="thank-you" role="status" hidden>
+      <img class="thank-you-logo" src="/images/logo-wordmark.svg" alt="Caspian Capital" />
+      <p class="thank-you-text">Thank you! 🎊 Your information has been submitted to the team 📩</p>
+      <a class="thank-you-back" href="/">&larr; Back to Caspian Capital</a>
     </div>
   </main>
 
 <!--  Script for submitting the Invest Form  -->
   <script>
+  // Swap the form for the thank-you message. Inside the modal, also ask modal.js to close itself
+  // after a few seconds (modal.js listens for this message).
+  function showThankYou(form) {
+    form.style.display = 'none';
+    document.querySelector('.form-wrapper').classList.add('is-thankyou');
+    document.getElementById('confirmation').hidden = false;
+    if (window.self !== window.top) {
+      setTimeout(function () {
+        window.parent.postMessage({ type: 'site-modal:request-close' }, window.location.origin);
+      }, 4500);
+    }
+  }
+
   document.getElementById('invest-form').addEventListener('submit', async function(e) {
     e.preventDefault();
 
@@ -137,8 +152,7 @@
 
       const result = await res.json();
       if (result.result === 'success') {
-        form.style.display = 'none';
-        document.getElementById('confirmation').style.display = 'block';
+        showThankYou(form);
       } else {
         alert('❌ Something went wrong. Please try again.');
       }
