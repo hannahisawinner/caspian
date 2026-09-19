@@ -73,8 +73,32 @@ function populatePropertyDetails() {
   document.getElementById("property-image").src = property.image;
   document.getElementById("property-image").alt = property.title;
 
+  updateSeoTags(property, propertyId);
+
   // Add this line to inject the Before & After section
   renderBeforeAfterImages(property);
+}
+
+// Give each property its own title/description/canonical (all properties share details.html)
+function updateSeoTags(property, id) {
+  const site = "https://www.caspiancapitaltx.com";
+  const title = `${property.title} | ${property.location} | Caspian Capital`;
+  const desc = `${property.title} in ${property.location}: ${property.specs}. ${property.description} Before-and-after photos of this Caspian Capital project.`;
+  const url = `${site}/projects/details.html?id=${encodeURIComponent(id)}`;
+  const image = new URL(property.image, window.location.href).href;
+
+  document.title = title;
+  const set = (selector, attr, value) => {
+    const el = document.querySelector(selector);
+    if (el) el.setAttribute(attr, value);
+  };
+  set('meta[name="description"]', "content", desc);
+  set('link[rel="canonical"]', "href", url);
+  set('meta[property="og:title"]', "content", title);
+  set('meta[property="og:description"]', "content", desc);
+  set('meta[property="og:url"]', "content", url);
+  set('meta[property="og:image"]', "content", image);
+  set('meta[property="og:image:alt"]', "content", property.title);
 }
 
 

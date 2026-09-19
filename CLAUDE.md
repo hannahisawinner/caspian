@@ -22,6 +22,13 @@ The owner is still learning git/ops: explain steps plainly.
 ## Favicon
 `favicon.svg`, `favicon-32.png`, `favicon-48.png`, `apple-touch-icon.png` live in the site root and are linked in the `<head>` of every HTML page. A new page needs the same four `<link>` tags.
 
+## SEO
+Every page's `<head>` has a unique `<title>` (`<Page> | Caspian Capital`, under ~60 chars), a `meta description` (under ~155 chars, only claims the site actually supports), a `canonical` link (always `https://www.caspiancapitaltx.com/...`), Open Graph tags and `twitter:card` (share image: `images/og-image.jpg`, 1200x630, wordmark logo). The homepage also has Organization JSON-LD (logo: `logo-512.png`).
+- **New page checklist:** add the tags above (copy from a sibling page), add the URL to `sitemap.xml`, add the four favicon `<link>` tags, use a real `<h1>`.
+- **Property detail pages** all share `projects/details.html`; `updateSeoTags()` in `projects/details.js` sets each property's title/description/canonical from its data. A new property in `details.js` also needs a line in `sitemap.xml` (`/projects/details.html?id=<id>`).
+- Root files: `robots.txt` (blocks `/CLAUDE.md` and `/tools/`), `sitemap.xml`, `404.html` (uses absolute paths because it is served from any depth; `noindex`; GitHub Pages serves it automatically for missing URLs — Live Server does not).
+- Not done yet: public contact email, LinkedIn/social links (`sameAs` in the JSON-LD), Google Search Console submission (owner task; DNS already has a Google verification TXT record), richer page copy.
+
 ## Forms (Contact + Invest)
 Both forms are plain HTML that submit with `fetch()` (URL-encoded POST) to a Google Apps Script web app, which appends a row to a Google Sheet. There is no other backend.
 - Contact: `contact/index.html` (`formType=contact`) → sheet tab `ContactSubmissions`

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /CLAUDE.md
+Disallow: /tools/
+
+Sitemap: https://www.caspiancapitaltx.com/sitemap.xml

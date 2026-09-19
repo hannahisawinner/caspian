@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Caspian Capital</title>
+  <meta name="robots" content="noindex" />
+  <!-- Absolute paths on purpose: this page is shown for missing URLs at any folder depth. -->
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body>
+
+  <!-- Desktop Nav -->
+  <nav class="navbar">
+    <a href="/" class="logo">Caspian Capital</a>
+    <ul class="nav-links desktop-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/markets/">Markets</a></li>
+      <li><a href="/projects/">Recent Projects</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/invest/" target="_blank" rel="noopener noreferrer">Invest</a></li>
+    </ul>
+    <div class="hamburger" onclick="openMenu()">☰</div>
+  </nav>
+
+  <!-- Overlay Menu -->
+  <div id="overlayMenu" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeMenu()">✕</span>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/markets/">Markets</a></li>
+        <li><a href="/projects/">Recent Projects</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/invest/" target="_blank" rel="noopener noreferrer">Invest</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="hero">
+    <h1>Page not found</h1>
+    <p>Sorry, we couldn't find that page. It may have moved or the link may be incorrect.</p>
+    <a class="cta-button" href="/">Back to Home</a>
+  </header>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Caspian Capital Operations. All rights reserved.</p>
+    <div class="social-links">
+      <a href="/contact/" target="_blank" rel="noopener noreferrer">Contact Us</a>
+ | 
+      <a href="/invest/" target="_blank" rel="noopener noreferrer">Investment Opportunities</a>
+    </div>
+  </footer>
+
+  <!-- Open/Close Overlay Menu -->
+  <script>
+    function openMenu() {
+      document.getElementById("overlayMenu").classList.add("active");
+      document.body.classList.add("menu-open");
+    }
+
+    function closeMenu() {
+      document.getElementById("overlayMenu").classList.remove("active");
+      document.body.classList.remove("menu-open");
+    }
+  </script>
+
+</body>
+</html>
