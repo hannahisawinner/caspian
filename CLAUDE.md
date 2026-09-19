@@ -21,7 +21,11 @@ The owner is still learning git/ops: explain steps plainly.
 
 ## Navigation conventions
 - Internal links open in the same tab (no `target="_blank"`). Only truly external links should open a new tab (with `rel="noopener noreferrer"`).
-- `contact/` and `invest/` are standalone form pages with no navbar, so each has a "← Back to Caspian Capital" link (`.form-back-link`) at the top of the card. Keep it if you restyle them.
+- **Contact and Invest open as a modal** on top of whatever page the visitor is on. `modal.js` (loaded with `<script src="/modal.js" defer>` at the end of every page except the two form pages) catches clicks on any link to `/contact/` or `/invest/` and shows that page inside an `<iframe>` in a native `<dialog>` (styles: `.site-modal*` at the bottom of `style.css`). Close = X button, Esc, or clicking outside. The forms and their Apps Script logic stay in `contact/index.html` and `invest/index.html` — edit them there, nowhere else.
+- The two form pages still work standalone (direct link, Cmd/Ctrl-click, JS off, search results). A tiny `<head>` script adds `class="embedded"` when a form page is inside the modal iframe; `html.embedded ...` CSS then hides the "← Back to Caspian Capital" link and removes the card chrome. Keep that `<head>` script and the back link when restyling.
+- New page checklist addition: include `<script src="/modal.js" defer></script>` before `</body>` on any page that links to Contact/Invest.
+- Adding a third modal form: add its path to `FORMS` in `modal.js` and give that page the same `<head>` script.
+- Testing note: the desktop-app browser pane reports itself as hidden, so `<dialog>` `close` events, animations and lazy loading don't run there. Verify with real interaction/JS state checks and headless Chrome screenshots.
 
 ## Favicon
 `favicon.svg`, `favicon-32.png`, `favicon-48.png`, `apple-touch-icon.png` live in the site root and are linked in the `<head>` of every HTML page. A new page needs the same four `<link>` tags.
