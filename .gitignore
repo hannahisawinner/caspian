@@ -3,3 +3,6 @@ PRIVATE-NOTES.md
 
 # macOS
 .DS_Store
+
+# Apps Script source (contains the sheet ID) — local only
+apps-script/

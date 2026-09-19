@@ -1282,6 +1282,16 @@ select option {
 }
 
 
+/* Spam honeypot: off-screen (not display:none, which some bots skip), unreachable by keyboard */
+.hp-field {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* ===== Form submit states ===== */
 .submit-button:disabled {
   opacity: 0.85; /* muted while sending, together with the "Sending..." label */

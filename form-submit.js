@@ -5,11 +5,17 @@
  * The web app address lives HERE ONLY. Editing the Apps Script does not change it as long as you
  * redeploy as a "New version" of the existing deployment (a "New deployment" makes a new address).
  *
- * Each form needs: a .submit-button, and a <p class="form-error" role="alert" hidden></p> inside the <form>.
+ * Each form needs: a .submit-button, a <p class="form-error" role="alert" hidden></p>, and the hidden
+ * honeypot <div class="hp-field"> (copy it from contact/index.html) inside the <form>.
  * Usage:  const outcome = await sendForm(form, { formType: 'contact', name: '...', ... });
  *         if (outcome.ok) showThankYou(form);   // showThankYou() is in thank-you.js
  */
 var SHEET_URL = 'https://script.google.com/macros/s/AKfycbyZAc5-LouC4Ol6M1vs78YmJ__SivZTjeXhlHKa6oRNMB9LNR4mzt11KXNRA4xfQ95Tyg/exec';
+
+// Spam signals sent along with every submission (checked by the Apps Script, see PRIVATE-NOTES.md):
+//  - "website": a hidden field real visitors never see or fill; bots that fill every input give themselves away
+//  - "elapsed": seconds between the page loading and the click; bots submit instantly
+var PAGE_LOADED_AT = Date.now();
 
 var FORM_ERRORS = {
   // Google answered, but said it could not save the entry.
@@ -58,6 +64,12 @@ async function sendForm(form, fields) {
   errorEl.textContent = '';
   button.disabled = true;
   button.textContent = 'Sending…';
+
+  var honeypot = form.querySelector('.hp-field input');
+  fields = Object.assign({}, fields, {
+    website: honeypot ? honeypot.value : '',
+    elapsed: ((Date.now() - PAGE_LOADED_AT) / 1000).toFixed(1)
+  });
 
   var outcome = await submitToSheet(fields);
 
