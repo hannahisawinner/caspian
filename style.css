@@ -1373,6 +1373,16 @@ html.modal-open .navbar {
 /* ===== Form pages when shown inside the modal iframe (class added by a <head> script) ===== */
 html.embedded .form-back-link { display: none; }
 
+/* Hide the scrollbar inside the modal (scrolling itself still works) */
+html.embedded {
+  scrollbar-width: none;      /* Firefox, current Chrome/Edge */
+  -ms-overflow-style: none;
+}
+
+html.embedded::-webkit-scrollbar {
+  display: none;              /* Safari and older Chrome */
+}
+
 html.embedded .body-form {
   display: block;
   min-height: 0;
