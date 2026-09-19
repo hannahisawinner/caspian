@@ -8,10 +8,10 @@ const properties = {
     image: "../images/properties/pipersmeadow-card.jpg",
     extraInfo: "Built in 2010 · 1,600 sqft · Large backyard · Quiet neighborhood",
     beforeAfter: [
-      { after: "../images/properties/pipersmeadow/after1", before: "../images/properties/pipersmeadow/before1" },
-      { after: "../images/properties/pipersmeadow/after2", before: "../images/properties/pipersmeadow/before2" },
-      { after: "../images/properties/pipersmeadow/after3", before: "../images/properties/pipersmeadow/before3" },
-      { after: "../images/properties/pipersmeadow/after4", before: "../images/properties/pipersmeadow/before4" }
+      { after: "../images/properties/pipersmeadow/after1.jpg", before: "../images/properties/pipersmeadow/before1.jpg" },
+      { after: "../images/properties/pipersmeadow/after2.jpg", before: "../images/properties/pipersmeadow/before2.jpg" },
+      { after: "../images/properties/pipersmeadow/after3.jpg", before: "../images/properties/pipersmeadow/before3.jpg" },
+      { after: "../images/properties/pipersmeadow/after4.jpg", before: "../images/properties/pipersmeadow/before4.jpg" }
     ]
   },
   "castle-hills": {
@@ -22,10 +22,10 @@ const properties = {
     image: "../images/properties/castlehills-card.jpg",
     extraInfo: "Built in 2015 · 2,200 sqft · Walkable to schools · Updated kitchen",
     beforeAfter: [
-      { after: "../images/properties/castlehills/after1", before: "../images/placeholder/before1" },
-      { after: "../images/properties/castlehills/after2", before: "../images/placeholder/before2" },
-      { after: "../images/properties/castlehills/after3", before: "../images/placeholder/before3" },
-      { after: "../images/properties/castlehills/after4", before: "../images/placeholder/before4" }
+      { after: "../images/properties/castlehills/after1.jpg", before: "../images/placeholder/before1.jpg" },
+      { after: "../images/properties/castlehills/after2.jpg", before: "../images/placeholder/before2.jpg" },
+      { after: "../images/properties/castlehills/after3.jpg", before: "../images/placeholder/before3.jpg" },
+      { after: "../images/properties/castlehills/after4.jpg", before: "../images/placeholder/before4.jpg" }
     ]
   },
   "high-country": {
@@ -36,10 +36,10 @@ const properties = {
     image: "../images/properties/highcountry-card.jpg",
     extraInfo: "Built in 2012 · 1,800 sqft · Open-concept design · Near shopping centers",
     beforeAfter: [
-      { after: "../images/properties/highcountry/after1", before: "../images/placeholder/before1" },
-      { after: "../images/properties/highcountry/after2", before: "../images/placeholder/before2" },
-      { after: "../images/properties/highcountry/after3", before: "../images/placeholder/before3" },
-      { after: "../images/properties/highcountry/after4", before: "../images/placeholder/before4" }
+      { after: "../images/properties/highcountry/after1.jpg", before: "../images/placeholder/before1.jpg" },
+      { after: "../images/properties/highcountry/after2.jpg", before: "../images/placeholder/before2.jpg" },
+      { after: "../images/properties/highcountry/after3.jpg", before: "../images/placeholder/before3.jpg" },
+      { after: "../images/properties/highcountry/after4.jpg", before: "../images/placeholder/before4.jpg" }
     ]
   },
   // Add more properties here...
@@ -150,6 +150,8 @@ function renderBeforeAfterImages(property) {
     img.dataset.before = pair.before;
     img.alt = "Before and After";
     img.className = "before-after-img";
+    img.loading = "lazy";
+    img.decoding = "async";
 
     // Hover logic
     img.addEventListener("mouseenter", () => {

@@ -13,6 +13,10 @@ The owner is still learning git/ops: explain steps plainly.
 - Property card thumbnails: `images/properties/<name>-card.jpg` (lowercase, no spaces).
 - Gallery photos: `images/properties/<name>/` (folders).
 - Why the `-card.jpg` suffix: a thumbnail named `CastleHills` collided with the folder `castlehills/` on case-insensitive macOS (files vanished locally, git showed phantom deletions). Never name a file the same as a folder apart from case.
+- All images are JPEGs named with a `.jpg` extension (extensionless files get served with the wrong content type).
+- **Adding or replacing photos:** drop the new `.jpg` into `images/`, then run `python3 tools/optimize_images.py <file or folder>` (no arguments = everything under `images/`). It resizes (hero/backgrounds 1920px, cards + galleries 1200px), recompresses to ~200-350KB, and strips hidden metadata such as GPS location. It overwrites in place and is safe to re-run; `--dry-run` previews. Keep full-size originals outside the repo. Needs `pip3 install pillow` once.
+- Never commit unoptimized photos: phone/camera originals are 2-10MB and slow the site (the images folder went from 37MB to ~7MB in Sept 2026).
+- Lazy loading: below-the-fold `<img>` tags get `loading="lazy" decoding="async"`; the first/top images (first carousel slide, first row of project cards, main detail-page photo) load normally. CSS `background-image` images can't be lazy-loaded, so keep those small.
 - Thumbnails are referenced in both `projects/index.html` and `projects/details.js`. Search the whole repo (html, css, js) for the old path before renaming any image.
 
 ## Favicon
