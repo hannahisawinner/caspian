@@ -53,8 +53,15 @@
       <button type="submit" class="submit-button">Submit</button>
       <p id="form-response" style="margin-top: 15px; text-align: center;"></p>
     </form>
+
+    <div id="confirmation" class="thank-you" role="status" hidden>
+      <img class="thank-you-logo" src="/images/logo-wordmark.svg" alt="Caspian Capital" />
+      <p class="thank-you-text">Thank you! 🎊 Your message has been sent to the team 📩</p>
+      <a class="thank-you-back" href="/">&larr; Back to Caspian Capital</a>
+    </div>
   </main>
 
+<script src="/thank-you.js"></script>
 <!--   Script for submitting the Contact Form -->
   <script>
   const contactForm = document.getElementById('contact-form');
@@ -96,8 +103,7 @@
 
       const result = await res.json();
       if (result.result === 'success') {
-        contactForm.reset();
-        showMessage("✅ Message sent successfully!");
+        showThankYou(contactForm);
       } else {
         showMessage("❌ Something went wrong. Please try again.", 'darkred');
       }

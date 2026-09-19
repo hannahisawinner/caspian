@@ -113,21 +113,9 @@
     </div>
   </main>
 
+<script src="/thank-you.js"></script>
 <!--  Script for submitting the Invest Form  -->
   <script>
-  // Swap the form for the thank-you message. Inside the modal, also ask modal.js to close itself
-  // after a few seconds (modal.js listens for this message).
-  function showThankYou(form) {
-    form.style.display = 'none';
-    document.querySelector('.form-wrapper').classList.add('is-thankyou');
-    document.getElementById('confirmation').hidden = false;
-    if (window.self !== window.top) {
-      setTimeout(function () {
-        window.parent.postMessage({ type: 'site-modal:request-close' }, window.location.origin);
-      }, 4500);
-    }
-  }
-
   document.getElementById('invest-form').addEventListener('submit', async function(e) {
     e.preventDefault();
 
