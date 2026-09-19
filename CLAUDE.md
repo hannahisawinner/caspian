@@ -19,6 +19,10 @@ The owner is still learning git/ops: explain steps plainly.
 - Lazy loading: below-the-fold `<img>` tags get `loading="lazy" decoding="async"`; the first/top images (first carousel slide, first row of project cards, main detail-page photo) load normally. CSS `background-image` images can't be lazy-loaded, so keep those small.
 - Thumbnails are referenced in both `projects/index.html` and `projects/details.js`. Search the whole repo (html, css, js) for the old path before renaming any image.
 
+## Navigation conventions
+- Internal links open in the same tab (no `target="_blank"`). Only truly external links should open a new tab (with `rel="noopener noreferrer"`).
+- `contact/` and `invest/` are standalone form pages with no navbar, so each has a "← Back to Caspian Capital" link (`.form-back-link`) at the top of the card. Keep it if you restyle them.
+
 ## Favicon
 `favicon.svg`, `favicon-32.png`, `favicon-48.png`, `apple-touch-icon.png` live in the site root and are linked in the `<head>` of every HTML page. A new page needs the same four `<link>` tags.
 

@@ -997,6 +997,19 @@ market-section .market-card .market-overlay p {
 }
 
 /* Form Heading */
+.form-back-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  color: navy;
+  text-decoration: none;
+}
+
+.form-back-link:hover,
+.form-back-link:focus-visible {
+  text-decoration: underline;
+}
+
 .form-heading {
   text-align: center;
   margin-bottom: 30px;
@@ -1062,6 +1075,7 @@ label small {
   cursor: pointer;
   transition: background 0.3s ease;
   width: 300px;
+  max-width: 100%; /* don't overflow the card on very small phones */
 }
 
 .submit-button:hover {
@@ -1090,6 +1104,7 @@ select option {
 /* Mobile adjustments */
 @media (max-width: 600px) {
   .form-wrapper {
+    min-width: 0; /* the desktop 400px minimum made the form wider than most phones */
     margin: 20px 15px;
     padding: 20px;
   }
