@@ -58,6 +58,7 @@ async function sendForm(form, fields) {
   errorEl.textContent = '';
   button.disabled = true;
   button.textContent = 'Sending…';
+  button.classList.add('is-sending'); // shows the spinner (style.css)
 
   var outcome = await submitToSheet(fields);
 
@@ -67,6 +68,7 @@ async function sendForm(form, fields) {
     errorEl.scrollIntoView({ block: 'nearest' }); // don't leave it below the fold (the modal hides its scrollbar)
     button.disabled = false;
     button.textContent = label;
+    button.classList.remove('is-sending');
   }
   return outcome;
 }
