@@ -6,6 +6,9 @@
  * in a <dialog>. Without JavaScript, or when a link is opened in a new tab (Cmd/Ctrl-click), the
  * links simply navigate to the standalone page.
  *
+ * While it is open the page gets a "site-modal:open" event, and "site-modal:close" when it closes
+ * (the homepage carousel uses these to pause itself).
+ *
  * To add another modal form: add its path to FORMS below and give that page the "embedded" styles
  * (see the .embedded rules in style.css and the tiny <head> script in contact/index.html).
  */
@@ -80,6 +83,7 @@
     var scrollbar = window.innerWidth - root.clientWidth; // stops the page jumping sideways
     root.style.setProperty("--scrollbar-width", scrollbar + "px");
     root.classList.add("modal-open");
+    document.dispatchEvent(new CustomEvent("site-modal:open")); // lets pages pause animations
   }
 
   function closeModal() {
@@ -88,7 +92,10 @@
   }
 
   function unlockScroll() {
-    document.documentElement.classList.remove("modal-open");
+    var root = document.documentElement;
+    if (!root.classList.contains("modal-open")) return; // already unlocked (X and "close" event both call this)
+    root.classList.remove("modal-open");
+    document.dispatchEvent(new CustomEvent("site-modal:close"));
   }
 
   function wasSubmitted() {

@@ -189,6 +189,10 @@
       clearInterval(interval);
       interval = setInterval(nextSlide, 5000);
     }
+
+    // Pause the auto-advance while the Contact/Invest modal is open (events come from modal.js)
+    document.addEventListener("site-modal:open", () => clearInterval(interval));
+    document.addEventListener("site-modal:close", resetInterval);
   </script>
   
   <script src="/modal.js" defer></script>
