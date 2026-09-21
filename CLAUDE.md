@@ -31,6 +31,7 @@ The owner is still learning git/ops: explain steps plainly.
 
 ## Open to-dos
 - **Legal disclaimer + privacy notice (needed):** the Invest form collects investor information (name, contact details, accreditation status, budget) and the Contact form collects contact details. Add a privacy notice/disclaimer, linked from the footer and near the forms (and mention any anti-spam service such as Cloudflare Turnstile if adopted). This wording should be reviewed by someone qualified (attorney/compliance) before publishing — do not draft final legal text without that review.
+- **Return-related wording to include in that review:** About page ("...deliver solid returns while adding value...") and Markets page ("Leveraging industry migration for long-term returns."). The homepage meta/Open Graph/JSON-LD description was deliberately made neutral (Sept 2026) — keep public descriptions (site, LinkedIn tagline) free of return claims until reviewed.
 - Public generic contact email (not a personal one) and social links (add to the `Organization` JSON-LD `sameAs`).
 - Google Search Console: verify and submit `https://www.caspiancapitaltx.com/sitemap.xml` (owner: domain is on the family GoDaddy account).
 - Domain/HTTPS: remove the two non-GitHub A records (`76.223.105.230`, `13.248.243.5`) at GoDaddy so the bare domain stops showing a certificate warning, then turn on "Enforce HTTPS" in GitHub Pages settings.
