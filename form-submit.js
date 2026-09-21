@@ -26,32 +26,56 @@ var FORM_ERRORS = {
                "If you've already tried, we may have received it."
 };
 
-async function submitToSheet(fields) {
-  var response;
+// Google's reply step is flaky (roughly 1 in 5 requests answer with an HTML error page even though the
+// entry WAS saved). So when we can't read the reply we quietly try once more.
+// !! This is only safe because the Apps Script ignores an identical submission seen within 10 minutes
+// !! (see apps-script/Code.gs, "Exact repeat"). If that check is ever removed, remove the retry too,
+// !! or every flaky reply will create a duplicate row.
+var SUBMIT_TIMEOUT_MS = 20000; // give up on one attempt after this long
+var RETRY_DELAY_MS = 1500;
+
+// One attempt. Returns { ok: true } or { ok: false, retryable: boolean, message }.
+async function attemptSubmit(fields) {
+  var controller = new AbortController();
+  var timer = setTimeout(function () { controller.abort(); }, SUBMIT_TIMEOUT_MS);
+  var text, status;
   try {
-    response = await fetch(SHEET_URL, {
+    var response = await fetch(SHEET_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // form-style body avoids a CORS preflight
-      body: new URLSearchParams(fields)
+      body: new URLSearchParams(fields),
+      signal: controller.signal
     });
+    status = response.status;
+    text = await response.text();
   } catch (err) {
-    console.error('Form submission: network error', err);
-    return { ok: false, message: FORM_ERRORS.unconfirmed };
+    console.error('Form submission: no reply (network error or timeout)', err);
+    return { ok: false, retryable: true, message: FORM_ERRORS.unconfirmed };
+  } finally {
+    clearTimeout(timer);
   }
 
-  var text = await response.text();
   var result;
   try {
     result = JSON.parse(text);
   } catch (err) {
     // Usually a Google error page (HTML) instead of data. Keep a trace for debugging.
-    console.error('Form submission: unreadable response', response.status, text.slice(0, 200));
-    return { ok: false, message: FORM_ERRORS.unconfirmed };
+    console.error('Form submission: unreadable response', status, text.slice(0, 200));
+    return { ok: false, retryable: true, message: FORM_ERRORS.unconfirmed };
   }
 
   if (result && result.result === 'success') return { ok: true };
   console.error('Form submission: rejected by the server', result);
-  return { ok: false, message: FORM_ERRORS.rejected };
+  return { ok: false, retryable: false, message: FORM_ERRORS.rejected }; // Google answered "error": retrying won't help
+}
+
+async function submitToSheet(fields) {
+  var outcome = await attemptSubmit(fields);
+  if (!outcome.ok && outcome.retryable) {
+    await new Promise(function (resolve) { setTimeout(resolve, RETRY_DELAY_MS); });
+    outcome = await attemptSubmit(fields);
+  }
+  return outcome;
 }
 
 async function sendForm(form, fields) {
