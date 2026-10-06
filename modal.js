@@ -20,7 +20,7 @@
     "/contact/": "Contact Caspian Capital"
   };
 
-  var dialog, frame, observer;
+  var dialog, frame, observer, pollTimer;
   var currentPath = null;
   var pressStartedOnBackdrop = false;
 
@@ -58,7 +58,8 @@
     try { doc = frame.contentDocument; } catch (e) { return; }
     if (!doc || !doc.body) return;
     var contentHeight = Math.ceil(doc.body.getBoundingClientRect().height);
-    frame.style.height = Math.min(contentHeight, Math.floor(window.innerHeight * 0.92)) + "px";
+    var next = Math.min(contentHeight, Math.floor(window.innerHeight * 0.94)) + "px";
+    if (frame.style.height !== next) frame.style.height = next;
   }
 
   function onFrameLoad() {
@@ -67,15 +68,25 @@
     if (!doc || !doc.body) return;
     fit();
     if (observer) observer.disconnect();
-    if (window.ResizeObserver) {
-      observer = new ResizeObserver(fit); // form grows/shrinks (e.g. the thank-you message)
+    // Watch the form's size from inside the frame itself (more reliable than a parent-page observer watching
+    // another document), so the modal follows it when it grows or shrinks (e.g. an error message appears).
+    var RO = (frame.contentWindow && frame.contentWindow.ResizeObserver) || window.ResizeObserver;
+    if (RO) {
+      observer = new RO(fit);
       observer.observe(doc.body);
     }
+    // Fallback that does not depend on ResizeObserver: re-check a few times a second while the modal is open.
+    startPolling();
     // On desktop, start typing straight away. Skipped on touch so the keyboard doesn't pop up.
     if (window.matchMedia && window.matchMedia("(pointer: fine)").matches) {
       var first = doc.querySelector("input, select, textarea");
       if (first) first.focus();
     }
+  }
+
+  function startPolling() {
+    clearInterval(pollTimer);
+    pollTimer = setInterval(fit, 250);
   }
 
   function lockScroll() {
@@ -95,6 +106,7 @@
     var root = document.documentElement;
     if (!root.classList.contains("modal-open")) return; // already unlocked (X and "close" event both call this)
     root.classList.remove("modal-open");
+    clearInterval(pollTimer);
     document.dispatchEvent(new CustomEvent("site-modal:close"));
   }
 
@@ -119,6 +131,7 @@
     dialog.classList.remove("is-closing");
     lockScroll();
     dialog.showModal();
+    startPolling(); // also needed when re-opening the same form (the frame is not reloaded then)
   }
 
   // The Invest form asks to be closed a few seconds after the thank-you message appears.

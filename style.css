@@ -1500,3 +1500,30 @@ html.embedded .form-wrapper {
 @media (max-width: 600px) {
   html.embedded .form-wrapper { padding: 56px 20px 28px; }
 }
+
+/* Compact two-column layout inside the modal so the whole form fits on a laptop screen without scrolling.
+   Name and notes/message stay full width; Email|Phone and (Invest) Timeline|Budget sit side by side.
+   Phones keep the normal single column (the modal is full screen there and may scroll). */
+@media (min-width: 601px) {
+  html.embedded .form-wrapper { padding: 34px 36px 22px; }
+
+  html.embedded .form-heading {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  html.embedded .form-wrapper form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+  }
+
+  html.embedded .form-group { margin-bottom: 12px; min-width: 0; }
+  html.embedded .form-group--wide { grid-column: 1 / -1; }
+  html.embedded .form-group label { margin-bottom: 5px; }
+  html.embedded .form-group textarea { height: 72px; }
+
+  html.embedded .submit-button,
+  html.embedded .form-error { grid-column: 1 / -1; }
+  html.embedded .submit-button { margin-top: 4px; justify-self: center; }
+}
