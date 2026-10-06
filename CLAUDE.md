@@ -17,6 +17,7 @@ The owner is still learning git/ops: explain steps plainly.
 - **Adding or replacing photos:** drop the new `.jpg` into `images/`, then run `python3 tools/optimize_images.py <file or folder>` (no arguments = everything under `images/`). It resizes (hero/backgrounds 1920px, cards + galleries 1200px), recompresses to ~200-350KB, and strips hidden metadata such as GPS location. It overwrites in place and is safe to re-run; `--dry-run` previews. Keep full-size originals outside the repo. Needs `pip3 install pillow` once.
 - Never commit unoptimized photos: phone/camera originals are 2-10MB and slow the site (the images folder went from 37MB to ~7MB in Sept 2026).
 - Lazy loading: below-the-fold `<img>` tags get `loading="lazy" decoding="async"`; the first/top images (first carousel slide, first row of project cards, main detail-page photo) load normally. CSS `background-image` images can't be lazy-loaded, so keep those small.
+- **Card order:** the cards on `projects/index.html` are in the owner's chosen order (Oct 2026). The prev/next arrows on the detail pages follow `propertyOrder` in `projects/details.js` — keep that list in the same relative order as the cards that have detail pages, and add any new detail-page property to it.
 - Thumbnails are referenced in both `projects/index.html` and `projects/details.js`. Search the whole repo (html, css, js) for the old path before renaming any image.
 
 ## Navigation conventions

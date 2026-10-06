@@ -45,8 +45,8 @@ const properties = {
   // Add more properties here...
 };
 
-// Order of properties from projects.html - for the arrows
-const propertyOrder = ["pipers-meadow", "castle-hills", "high-country"];
+// Order of the properties that have detail pages, same order as their cards on projects/index.html - for the arrows
+const propertyOrder = ["castle-hills", "pipers-meadow", "high-country"];
 
 
 // Helper to get URL parameter
