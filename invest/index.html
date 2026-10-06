@@ -46,18 +46,6 @@
       </div>
 
       <div class="form-group">
-        <label for="investor-type">Investor Type *</label>
-        <select id="investor-type" name="investorType" required>
-          <option value="" disabled selected hidden>Please select</option>
-          <option value="Individual">Individual</option>
-          <option value="IRA">IRA</option>
-          <option value="Trust">Trust</option>
-          <option value="LLC">LLC</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-
-      <div class="form-group">
         <label for="timeline">When are you looking to invest? *</label>
         <select id="timeline" name="timeline" required>
           <option value="" disabled selected hidden>Please select</option>
@@ -76,25 +64,6 @@
           <option value="$50k–$100k">$50k–$100k</option>
           <option value="$100k–$250k">$100k–$250k</option>
           <option value="$250k+">$250k+</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <p style="font-style: italic; margin-bottom: 4px;">
-          SEC regulations require us to verify investor status before sharing specific investment details.
-        </p>
-        <label for="accredited">
-          Are you an accredited investor as defined by the SEC?<br />
-          <small>
-            Accredited investors typically have a net worth of $1M+ excluding primary residence OR an annual income of $200K+ individually or $300K+ jointly for the past two years.
-          </small>
-        </label>
-        <select id="accredited" name="accredited" required>
-          <option value="" disabled selected hidden>Please select</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-          <option value="Unsure">Unsure</option>
-          <option value="Other">Other</option>
         </select>
       </div>
 
@@ -131,10 +100,8 @@
       fullName: form.fullName.value,
       email: form.email.value,
       phone: form.phone.value,
-      investorType: form.investorType.value,
-      accredited: form.accredited.value, // field names must match the Apps Script (see CLAUDE.md)
       timeline: form.timeline.value,
-      budget: form.budget.value,
+      budget: form.budget.value, // field names must match the Apps Script (see CLAUDE.md)
       message: form.notes.value
     });
     if (outcome.ok) showThankYou(form);
