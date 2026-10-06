@@ -645,6 +645,11 @@ body.menu-open .hamburger {
   transform: scale(1.02);
 }
 
+/* Placeholder card (not a link): no hover zoom, since that suggests it is clickable */
+.market-card--placeholder:hover {
+  transform: none;
+}
+
 .market-overlay {
   position: absolute;
   inset: 0;
